@@ -66,6 +66,8 @@
     <google.core.version>1.91.1</google.core.version>
     <google.api-common.version>1.8.1</google.api-common.version>
     <google.common-protos.version>1.16.0</google.common-protos.version>
+    <google.auth.version>0.17.2</google.auth.version>
+    <google.http-client.version>1.32.1</google.http-client.version>
     <gax.version>1.49.0</gax.version>
     <grpc.version>1.24.0</grpc.version>
     <protobuf.version>3.10.0</protobuf.version>
@@ -121,6 +123,20 @@
         <groupId>com.google.cloud</groupId>
         <artifactId>google-cloud-core-bom</artifactId>
         <version>${google.core.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.google.auth</groupId>
+        <artifactId>google-auth-library-bom</artifactId>
+        <version>${google.auth.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>com.google.http-client</groupId>
+        <artifactId>google-http-client-bom</artifactId>
+        <version>${google.http-client.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
