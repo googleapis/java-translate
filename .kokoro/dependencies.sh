@@ -15,7 +15,7 @@
 
 set -eo pipefail
 
-cd github//
+cd github/google-cloud-java/
 
 # Print out Java
 java -version
