@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.google.api.grpc</groupId>
   <artifactId>grpc-google-cloud-translate-v3</artifactId>
-  <version>0.77.0</version><!-- {x-version-update:grpc-google-cloud-translate-v3:current} -->
+  <version>1.0.0</version><!-- {x-version-update:grpc-google-cloud-translate-v3:current} -->
   <name>grpc-google-cloud-translate-v3</name>
   <description>GRPC library for grpc-google-cloud-translate-v3</description>
   <parent>

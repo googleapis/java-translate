@@ -90,7 +90,7 @@
       <dependency>
         <groupId>com.google.api.grpc</groupId>
         <artifactId>proto-google-cloud-translate-v3</artifactId>
-        <version>0.77.0</version><!-- {x-version-update:proto-google-cloud-translate-v3:current} -->
+        <version>1.0.0</version><!-- {x-version-update:proto-google-cloud-translate-v3:current} -->
       </dependency>
       <dependency>
         <groupId>com.google.api.grpc</groupId>
@@ -100,7 +100,7 @@
       <dependency>
         <groupId>com.google.api.grpc</groupId>
         <artifactId>grpc-google-cloud-translate-v3</artifactId>
-        <version>0.77.0</version><!-- {x-version-update:grpc-google-cloud-translate-v3:current} -->
+        <version>1.0.0</version><!-- {x-version-update:grpc-google-cloud-translate-v3:current} -->
       </dependency>
       <dependency>
         <groupId>com.google.cloud</groupId>
