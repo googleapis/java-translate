@@ -47,7 +47,6 @@ public class ITTranslateTest {
     "pt", "ro", "ru", "sr", "st", "si", "sk", "sl", "so", "es", "su", "sw", "sv", "tg", "ta", "te",
     "th", "tr", "uk", "ur", "uz", "vi", "cy", "yi", "yo", "zu"
   };
-  private static final String API_KEY = "api_key";
 
   @Test
   public void testListSupportedLanguages() {
@@ -143,9 +142,8 @@ public class ITTranslateTest {
 
   @Test
   public void testApiKeyOverridesDefaultCredentials() {
-    TranslateOptions options = RemoteTranslateHelper.create(API_KEY).getOptions();
+    TranslateOptions options = RemoteTranslateHelper.create().getOptions();
     assertNull(options.getCredentials());
-    assertEquals(options.getApiKey(), API_KEY);
   }
 
   @Test
@@ -157,8 +155,7 @@ public class ITTranslateTest {
 
   @Test
   public void testTranslateTextWithApiKey() {
-    Translate translate =
-        RemoteTranslateHelper.create(TranslateOptions.getDefaultApiKey()).getOptions().getService();
+    Translate translate = RemoteTranslateHelper.create().getOptions().getService();
     Translation translation = translate.translate("ocho");
     assertEquals("eight", translation.getTranslatedText());
     assertEquals("es", translation.getSourceLanguage());
