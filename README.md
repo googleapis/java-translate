@@ -82,6 +82,11 @@ See the [Cloud Translation client library docs][javadocs] to learn how to
 use this Cloud Translation Client Library.
 
 
+### Example Application
+
+[`TranslateExample`](https://github.com/googleapis/google-cloud-java/blob/master/google-cloud-examples/src/main/java/com/google/cloud/examples/translate/TranslateExample.java)
+is a simple command line interface that provides some of Google Translation's functionality.
+
 #### Creating an authorized service object
 To make authenticated requests to Google Translation, you must create a service object with
 credentials or use an API key. The simplest way to authenticate is to use
