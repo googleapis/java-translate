@@ -12,23 +12,24 @@ Java idiomatic client for [Cloud Translation][product-docs].
 
 If you are using Maven with [BOM][libraries-bom], add this to your pom.xml file
 ```xml
-<dependencyManagement>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.google.cloud</groupId>
+        <artifactId>libraries-bom</artifactId>
+        <version>4.2.0</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
   <dependencies>
     <dependency>
       <groupId>com.google.cloud</groupId>
-      <artifactId>libraries-bom</artifactId>
-      <version>4.2.0</version>
-      <type>pom</type>
-      <scope>import</scope>
+      <artifactId>google-cloud-translate</artifactId>
     </dependency>
-  </dependencies>
-</dependencyManagement>
-<dependencies>
-  <dependency>
-    <groupId>com.google.cloud</groupId>
-    <artifactId>google-cloud-translate</artifactId>
-  </dependency>
-</dependencies>
+
 ```
 
 [//]: # ({x-version-update-start:google-cloud-translate:released})
@@ -36,11 +37,62 @@ If you are using Maven with [BOM][libraries-bom], add this to your pom.xml file
 If you are using Maven without BOM, add this to your dependencies:
 
 ```xml
-<dependency>
-  <groupId>com.google.cloud</groupId>
-  <artifactId>google-cloud-translate</artifactId>
-  <version>1.94.4</version>
-</dependency>
+    <dependency>
+      <groupId>com.google.cloud</groupId>
+      <artifactId>google-cloud-translate</artifactId>
+      <version>1.94.4</version>
+    </dependency>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.google.truth</groupId>
+      <artifactId>truth</artifactId>
+      <version>1.0.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <!-- compile and run all snippet tests -->
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <version>3.1.0</version>
+        <executions>
+          <execution>
+            <id>add-snippets-source</id>
+            <goals>
+              <goal>add-source</goal>
+            </goals>
+            <configuration>
+              <sources>
+                <source>../snippets/src/main/java</source>
+              </sources>
+            </configuration>
+          </execution>
+          <execution>
+            <id>add-snippets-tests</id>
+            <goals>
+              <goal>add-test-source</goal>
+            </goals>
+            <configuration>
+              <sources>
+                <source>../snippets/src/test/java</source>
+              </sources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
+
 ```
 
 If you are using Gradle, add this to your dependencies
