@@ -30,7 +30,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler",
+    value = "by gRPC proto compiler (version 1.10.0)",
     comments = "Source: google/cloud/translate/v3/translation_service.proto")
 public final class TranslationServiceGrpc {
 
@@ -39,20 +39,30 @@ public final class TranslationServiceGrpc {
   public static final String SERVICE_NAME = "google.cloud.translation.v3.TranslationService";
 
   // Static method descriptors that strictly reflect the proto.
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getTranslateTextMethod()} instead.
+  public static final io.grpc.MethodDescriptor<
+          com.google.cloud.translate.v3.TranslateTextRequest,
+          com.google.cloud.translate.v3.TranslateTextResponse>
+      METHOD_TRANSLATE_TEXT = getTranslateTextMethodHelper();
+
   private static volatile io.grpc.MethodDescriptor<
           com.google.cloud.translate.v3.TranslateTextRequest,
           com.google.cloud.translate.v3.TranslateTextResponse>
       getTranslateTextMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "TranslateText",
-      requestType = com.google.cloud.translate.v3.TranslateTextRequest.class,
-      responseType = com.google.cloud.translate.v3.TranslateTextResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static io.grpc.MethodDescriptor<
           com.google.cloud.translate.v3.TranslateTextRequest,
           com.google.cloud.translate.v3.TranslateTextResponse>
       getTranslateTextMethod() {
+    return getTranslateTextMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<
+          com.google.cloud.translate.v3.TranslateTextRequest,
+          com.google.cloud.translate.v3.TranslateTextResponse>
+      getTranslateTextMethodHelper() {
     io.grpc.MethodDescriptor<
             com.google.cloud.translate.v3.TranslateTextRequest,
             com.google.cloud.translate.v3.TranslateTextResponse>
@@ -67,7 +77,9 @@ public final class TranslationServiceGrpc {
                           com.google.cloud.translate.v3.TranslateTextResponse>
                           newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TranslateText"))
+                      .setFullMethodName(
+                          generateFullMethodName(
+                              "google.cloud.translation.v3.TranslationService", "TranslateText"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
@@ -86,20 +98,30 @@ public final class TranslationServiceGrpc {
     return getTranslateTextMethod;
   }
 
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getDetectLanguageMethod()} instead.
+  public static final io.grpc.MethodDescriptor<
+          com.google.cloud.translate.v3.DetectLanguageRequest,
+          com.google.cloud.translate.v3.DetectLanguageResponse>
+      METHOD_DETECT_LANGUAGE = getDetectLanguageMethodHelper();
+
   private static volatile io.grpc.MethodDescriptor<
           com.google.cloud.translate.v3.DetectLanguageRequest,
           com.google.cloud.translate.v3.DetectLanguageResponse>
       getDetectLanguageMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "DetectLanguage",
-      requestType = com.google.cloud.translate.v3.DetectLanguageRequest.class,
-      responseType = com.google.cloud.translate.v3.DetectLanguageResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static io.grpc.MethodDescriptor<
           com.google.cloud.translate.v3.DetectLanguageRequest,
           com.google.cloud.translate.v3.DetectLanguageResponse>
       getDetectLanguageMethod() {
+    return getDetectLanguageMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<
+          com.google.cloud.translate.v3.DetectLanguageRequest,
+          com.google.cloud.translate.v3.DetectLanguageResponse>
+      getDetectLanguageMethodHelper() {
     io.grpc.MethodDescriptor<
             com.google.cloud.translate.v3.DetectLanguageRequest,
             com.google.cloud.translate.v3.DetectLanguageResponse>
@@ -114,7 +136,9 @@ public final class TranslationServiceGrpc {
                           com.google.cloud.translate.v3.DetectLanguageResponse>
                           newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DetectLanguage"))
+                      .setFullMethodName(
+                          generateFullMethodName(
+                              "google.cloud.translation.v3.TranslationService", "DetectLanguage"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
@@ -133,20 +157,30 @@ public final class TranslationServiceGrpc {
     return getDetectLanguageMethod;
   }
 
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getGetSupportedLanguagesMethod()} instead.
+  public static final io.grpc.MethodDescriptor<
+          com.google.cloud.translate.v3.GetSupportedLanguagesRequest,
+          com.google.cloud.translate.v3.SupportedLanguages>
+      METHOD_GET_SUPPORTED_LANGUAGES = getGetSupportedLanguagesMethodHelper();
+
   private static volatile io.grpc.MethodDescriptor<
           com.google.cloud.translate.v3.GetSupportedLanguagesRequest,
           com.google.cloud.translate.v3.SupportedLanguages>
       getGetSupportedLanguagesMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetSupportedLanguages",
-      requestType = com.google.cloud.translate.v3.GetSupportedLanguagesRequest.class,
-      responseType = com.google.cloud.translate.v3.SupportedLanguages.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static io.grpc.MethodDescriptor<
           com.google.cloud.translate.v3.GetSupportedLanguagesRequest,
           com.google.cloud.translate.v3.SupportedLanguages>
       getGetSupportedLanguagesMethod() {
+    return getGetSupportedLanguagesMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<
+          com.google.cloud.translate.v3.GetSupportedLanguagesRequest,
+          com.google.cloud.translate.v3.SupportedLanguages>
+      getGetSupportedLanguagesMethodHelper() {
     io.grpc.MethodDescriptor<
             com.google.cloud.translate.v3.GetSupportedLanguagesRequest,
             com.google.cloud.translate.v3.SupportedLanguages>
@@ -164,7 +198,9 @@ public final class TranslationServiceGrpc {
                           newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
                       .setFullMethodName(
-                          generateFullMethodName(SERVICE_NAME, "GetSupportedLanguages"))
+                          generateFullMethodName(
+                              "google.cloud.translation.v3.TranslationService",
+                              "GetSupportedLanguages"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
@@ -183,18 +219,26 @@ public final class TranslationServiceGrpc {
     return getGetSupportedLanguagesMethod;
   }
 
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getBatchTranslateTextMethod()} instead.
+  public static final io.grpc.MethodDescriptor<
+          com.google.cloud.translate.v3.BatchTranslateTextRequest, com.google.longrunning.Operation>
+      METHOD_BATCH_TRANSLATE_TEXT = getBatchTranslateTextMethodHelper();
+
   private static volatile io.grpc.MethodDescriptor<
           com.google.cloud.translate.v3.BatchTranslateTextRequest, com.google.longrunning.Operation>
       getBatchTranslateTextMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "BatchTranslateText",
-      requestType = com.google.cloud.translate.v3.BatchTranslateTextRequest.class,
-      responseType = com.google.longrunning.Operation.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static io.grpc.MethodDescriptor<
           com.google.cloud.translate.v3.BatchTranslateTextRequest, com.google.longrunning.Operation>
       getBatchTranslateTextMethod() {
+    return getBatchTranslateTextMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<
+          com.google.cloud.translate.v3.BatchTranslateTextRequest, com.google.longrunning.Operation>
+      getBatchTranslateTextMethodHelper() {
     io.grpc.MethodDescriptor<
             com.google.cloud.translate.v3.BatchTranslateTextRequest,
             com.google.longrunning.Operation>
@@ -211,7 +255,10 @@ public final class TranslationServiceGrpc {
                           com.google.longrunning.Operation>
                           newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BatchTranslateText"))
+                      .setFullMethodName(
+                          generateFullMethodName(
+                              "google.cloud.translation.v3.TranslationService",
+                              "BatchTranslateText"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
@@ -229,18 +276,26 @@ public final class TranslationServiceGrpc {
     return getBatchTranslateTextMethod;
   }
 
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getCreateGlossaryMethod()} instead.
+  public static final io.grpc.MethodDescriptor<
+          com.google.cloud.translate.v3.CreateGlossaryRequest, com.google.longrunning.Operation>
+      METHOD_CREATE_GLOSSARY = getCreateGlossaryMethodHelper();
+
   private static volatile io.grpc.MethodDescriptor<
           com.google.cloud.translate.v3.CreateGlossaryRequest, com.google.longrunning.Operation>
       getCreateGlossaryMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "CreateGlossary",
-      requestType = com.google.cloud.translate.v3.CreateGlossaryRequest.class,
-      responseType = com.google.longrunning.Operation.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static io.grpc.MethodDescriptor<
           com.google.cloud.translate.v3.CreateGlossaryRequest, com.google.longrunning.Operation>
       getCreateGlossaryMethod() {
+    return getCreateGlossaryMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<
+          com.google.cloud.translate.v3.CreateGlossaryRequest, com.google.longrunning.Operation>
+      getCreateGlossaryMethodHelper() {
     io.grpc.MethodDescriptor<
             com.google.cloud.translate.v3.CreateGlossaryRequest, com.google.longrunning.Operation>
         getCreateGlossaryMethod;
@@ -254,7 +309,9 @@ public final class TranslationServiceGrpc {
                           com.google.longrunning.Operation>
                           newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateGlossary"))
+                      .setFullMethodName(
+                          generateFullMethodName(
+                              "google.cloud.translation.v3.TranslationService", "CreateGlossary"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
@@ -272,20 +329,30 @@ public final class TranslationServiceGrpc {
     return getCreateGlossaryMethod;
   }
 
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getListGlossariesMethod()} instead.
+  public static final io.grpc.MethodDescriptor<
+          com.google.cloud.translate.v3.ListGlossariesRequest,
+          com.google.cloud.translate.v3.ListGlossariesResponse>
+      METHOD_LIST_GLOSSARIES = getListGlossariesMethodHelper();
+
   private static volatile io.grpc.MethodDescriptor<
           com.google.cloud.translate.v3.ListGlossariesRequest,
           com.google.cloud.translate.v3.ListGlossariesResponse>
       getListGlossariesMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "ListGlossaries",
-      requestType = com.google.cloud.translate.v3.ListGlossariesRequest.class,
-      responseType = com.google.cloud.translate.v3.ListGlossariesResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static io.grpc.MethodDescriptor<
           com.google.cloud.translate.v3.ListGlossariesRequest,
           com.google.cloud.translate.v3.ListGlossariesResponse>
       getListGlossariesMethod() {
+    return getListGlossariesMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<
+          com.google.cloud.translate.v3.ListGlossariesRequest,
+          com.google.cloud.translate.v3.ListGlossariesResponse>
+      getListGlossariesMethodHelper() {
     io.grpc.MethodDescriptor<
             com.google.cloud.translate.v3.ListGlossariesRequest,
             com.google.cloud.translate.v3.ListGlossariesResponse>
@@ -300,7 +367,9 @@ public final class TranslationServiceGrpc {
                           com.google.cloud.translate.v3.ListGlossariesResponse>
                           newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListGlossaries"))
+                      .setFullMethodName(
+                          generateFullMethodName(
+                              "google.cloud.translation.v3.TranslationService", "ListGlossaries"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
@@ -319,18 +388,26 @@ public final class TranslationServiceGrpc {
     return getListGlossariesMethod;
   }
 
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getGetGlossaryMethod()} instead.
+  public static final io.grpc.MethodDescriptor<
+          com.google.cloud.translate.v3.GetGlossaryRequest, com.google.cloud.translate.v3.Glossary>
+      METHOD_GET_GLOSSARY = getGetGlossaryMethodHelper();
+
   private static volatile io.grpc.MethodDescriptor<
           com.google.cloud.translate.v3.GetGlossaryRequest, com.google.cloud.translate.v3.Glossary>
       getGetGlossaryMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetGlossary",
-      requestType = com.google.cloud.translate.v3.GetGlossaryRequest.class,
-      responseType = com.google.cloud.translate.v3.Glossary.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static io.grpc.MethodDescriptor<
           com.google.cloud.translate.v3.GetGlossaryRequest, com.google.cloud.translate.v3.Glossary>
       getGetGlossaryMethod() {
+    return getGetGlossaryMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<
+          com.google.cloud.translate.v3.GetGlossaryRequest, com.google.cloud.translate.v3.Glossary>
+      getGetGlossaryMethodHelper() {
     io.grpc.MethodDescriptor<
             com.google.cloud.translate.v3.GetGlossaryRequest,
             com.google.cloud.translate.v3.Glossary>
@@ -345,7 +422,9 @@ public final class TranslationServiceGrpc {
                           com.google.cloud.translate.v3.Glossary>
                           newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetGlossary"))
+                      .setFullMethodName(
+                          generateFullMethodName(
+                              "google.cloud.translation.v3.TranslationService", "GetGlossary"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
@@ -363,18 +442,26 @@ public final class TranslationServiceGrpc {
     return getGetGlossaryMethod;
   }
 
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
+  @java.lang.Deprecated // Use {@link #getDeleteGlossaryMethod()} instead.
+  public static final io.grpc.MethodDescriptor<
+          com.google.cloud.translate.v3.DeleteGlossaryRequest, com.google.longrunning.Operation>
+      METHOD_DELETE_GLOSSARY = getDeleteGlossaryMethodHelper();
+
   private static volatile io.grpc.MethodDescriptor<
           com.google.cloud.translate.v3.DeleteGlossaryRequest, com.google.longrunning.Operation>
       getDeleteGlossaryMethod;
 
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "DeleteGlossary",
-      requestType = com.google.cloud.translate.v3.DeleteGlossaryRequest.class,
-      responseType = com.google.longrunning.Operation.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   public static io.grpc.MethodDescriptor<
           com.google.cloud.translate.v3.DeleteGlossaryRequest, com.google.longrunning.Operation>
       getDeleteGlossaryMethod() {
+    return getDeleteGlossaryMethodHelper();
+  }
+
+  private static io.grpc.MethodDescriptor<
+          com.google.cloud.translate.v3.DeleteGlossaryRequest, com.google.longrunning.Operation>
+      getDeleteGlossaryMethodHelper() {
     io.grpc.MethodDescriptor<
             com.google.cloud.translate.v3.DeleteGlossaryRequest, com.google.longrunning.Operation>
         getDeleteGlossaryMethod;
@@ -388,7 +475,9 @@ public final class TranslationServiceGrpc {
                           com.google.longrunning.Operation>
                           newBuilder()
                       .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-                      .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteGlossary"))
+                      .setFullMethodName(
+                          generateFullMethodName(
+                              "google.cloud.translation.v3.TranslationService", "DeleteGlossary"))
                       .setSampledToLocalTracing(true)
                       .setRequestMarshaller(
                           io.grpc.protobuf.ProtoUtils.marshaller(
@@ -408,43 +497,19 @@ public final class TranslationServiceGrpc {
 
   /** Creates a new async stub that supports all call types for the service */
   public static TranslationServiceStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<TranslationServiceStub> factory =
-        new io.grpc.stub.AbstractStub.StubFactory<TranslationServiceStub>() {
-          @java.lang.Override
-          public TranslationServiceStub newStub(
-              io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-            return new TranslationServiceStub(channel, callOptions);
-          }
-        };
-    return TranslationServiceStub.newStub(factory, channel);
+    return new TranslationServiceStub(channel);
   }
 
   /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static TranslationServiceBlockingStub newBlockingStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<TranslationServiceBlockingStub> factory =
-        new io.grpc.stub.AbstractStub.StubFactory<TranslationServiceBlockingStub>() {
-          @java.lang.Override
-          public TranslationServiceBlockingStub newStub(
-              io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-            return new TranslationServiceBlockingStub(channel, callOptions);
-          }
-        };
-    return TranslationServiceBlockingStub.newStub(factory, channel);
+    return new TranslationServiceBlockingStub(channel);
   }
 
   /** Creates a new ListenableFuture-style stub that supports unary calls on the service */
   public static TranslationServiceFutureStub newFutureStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<TranslationServiceFutureStub> factory =
-        new io.grpc.stub.AbstractStub.StubFactory<TranslationServiceFutureStub>() {
-          @java.lang.Override
-          public TranslationServiceFutureStub newStub(
-              io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-            return new TranslationServiceFutureStub(channel, callOptions);
-          }
-        };
-    return TranslationServiceFutureStub.newStub(factory, channel);
+    return new TranslationServiceFutureStub(channel);
   }
 
   /**
@@ -467,7 +532,7 @@ public final class TranslationServiceGrpc {
         com.google.cloud.translate.v3.TranslateTextRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.translate.v3.TranslateTextResponse>
             responseObserver) {
-      asyncUnimplementedUnaryCall(getTranslateTextMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getTranslateTextMethodHelper(), responseObserver);
     }
 
     /**
@@ -481,7 +546,7 @@ public final class TranslationServiceGrpc {
         com.google.cloud.translate.v3.DetectLanguageRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.translate.v3.DetectLanguageResponse>
             responseObserver) {
-      asyncUnimplementedUnaryCall(getDetectLanguageMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDetectLanguageMethodHelper(), responseObserver);
     }
 
     /**
@@ -495,7 +560,7 @@ public final class TranslationServiceGrpc {
         com.google.cloud.translate.v3.GetSupportedLanguagesRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.translate.v3.SupportedLanguages>
             responseObserver) {
-      asyncUnimplementedUnaryCall(getGetSupportedLanguagesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetSupportedLanguagesMethodHelper(), responseObserver);
     }
 
     /**
@@ -513,7 +578,7 @@ public final class TranslationServiceGrpc {
     public void batchTranslateText(
         com.google.cloud.translate.v3.BatchTranslateTextRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getBatchTranslateTextMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getBatchTranslateTextMethodHelper(), responseObserver);
     }
 
     /**
@@ -527,7 +592,7 @@ public final class TranslationServiceGrpc {
     public void createGlossary(
         com.google.cloud.translate.v3.CreateGlossaryRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getCreateGlossaryMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getCreateGlossaryMethodHelper(), responseObserver);
     }
 
     /**
@@ -542,7 +607,7 @@ public final class TranslationServiceGrpc {
         com.google.cloud.translate.v3.ListGlossariesRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.translate.v3.ListGlossariesResponse>
             responseObserver) {
-      asyncUnimplementedUnaryCall(getListGlossariesMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getListGlossariesMethodHelper(), responseObserver);
     }
 
     /**
@@ -556,7 +621,7 @@ public final class TranslationServiceGrpc {
     public void getGlossary(
         com.google.cloud.translate.v3.GetGlossaryRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.translate.v3.Glossary> responseObserver) {
-      asyncUnimplementedUnaryCall(getGetGlossaryMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getGetGlossaryMethodHelper(), responseObserver);
     }
 
     /**
@@ -571,60 +636,60 @@ public final class TranslationServiceGrpc {
     public void deleteGlossary(
         com.google.cloud.translate.v3.DeleteGlossaryRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
-      asyncUnimplementedUnaryCall(getDeleteGlossaryMethod(), responseObserver);
+      asyncUnimplementedUnaryCall(getDeleteGlossaryMethodHelper(), responseObserver);
     }
 
     @java.lang.Override
     public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-              getTranslateTextMethod(),
+              getTranslateTextMethodHelper(),
               asyncUnaryCall(
                   new MethodHandlers<
                       com.google.cloud.translate.v3.TranslateTextRequest,
                       com.google.cloud.translate.v3.TranslateTextResponse>(
                       this, METHODID_TRANSLATE_TEXT)))
           .addMethod(
-              getDetectLanguageMethod(),
+              getDetectLanguageMethodHelper(),
               asyncUnaryCall(
                   new MethodHandlers<
                       com.google.cloud.translate.v3.DetectLanguageRequest,
                       com.google.cloud.translate.v3.DetectLanguageResponse>(
                       this, METHODID_DETECT_LANGUAGE)))
           .addMethod(
-              getGetSupportedLanguagesMethod(),
+              getGetSupportedLanguagesMethodHelper(),
               asyncUnaryCall(
                   new MethodHandlers<
                       com.google.cloud.translate.v3.GetSupportedLanguagesRequest,
                       com.google.cloud.translate.v3.SupportedLanguages>(
                       this, METHODID_GET_SUPPORTED_LANGUAGES)))
           .addMethod(
-              getBatchTranslateTextMethod(),
+              getBatchTranslateTextMethodHelper(),
               asyncUnaryCall(
                   new MethodHandlers<
                       com.google.cloud.translate.v3.BatchTranslateTextRequest,
                       com.google.longrunning.Operation>(this, METHODID_BATCH_TRANSLATE_TEXT)))
           .addMethod(
-              getCreateGlossaryMethod(),
+              getCreateGlossaryMethodHelper(),
               asyncUnaryCall(
                   new MethodHandlers<
                       com.google.cloud.translate.v3.CreateGlossaryRequest,
                       com.google.longrunning.Operation>(this, METHODID_CREATE_GLOSSARY)))
           .addMethod(
-              getListGlossariesMethod(),
+              getListGlossariesMethodHelper(),
               asyncUnaryCall(
                   new MethodHandlers<
                       com.google.cloud.translate.v3.ListGlossariesRequest,
                       com.google.cloud.translate.v3.ListGlossariesResponse>(
                       this, METHODID_LIST_GLOSSARIES)))
           .addMethod(
-              getGetGlossaryMethod(),
+              getGetGlossaryMethodHelper(),
               asyncUnaryCall(
                   new MethodHandlers<
                       com.google.cloud.translate.v3.GetGlossaryRequest,
                       com.google.cloud.translate.v3.Glossary>(this, METHODID_GET_GLOSSARY)))
           .addMethod(
-              getDeleteGlossaryMethod(),
+              getDeleteGlossaryMethodHelper(),
               asyncUnaryCall(
                   new MethodHandlers<
                       com.google.cloud.translate.v3.DeleteGlossaryRequest,
@@ -641,7 +706,11 @@ public final class TranslationServiceGrpc {
    * </pre>
    */
   public static final class TranslationServiceStub
-      extends io.grpc.stub.AbstractAsyncStub<TranslationServiceStub> {
+      extends io.grpc.stub.AbstractStub<TranslationServiceStub> {
+    private TranslationServiceStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
     private TranslationServiceStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
@@ -664,7 +733,7 @@ public final class TranslationServiceGrpc {
         io.grpc.stub.StreamObserver<com.google.cloud.translate.v3.TranslateTextResponse>
             responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getTranslateTextMethod(), getCallOptions()),
+          getChannel().newCall(getTranslateTextMethodHelper(), getCallOptions()),
           request,
           responseObserver);
     }
@@ -681,7 +750,7 @@ public final class TranslationServiceGrpc {
         io.grpc.stub.StreamObserver<com.google.cloud.translate.v3.DetectLanguageResponse>
             responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getDetectLanguageMethod(), getCallOptions()),
+          getChannel().newCall(getDetectLanguageMethodHelper(), getCallOptions()),
           request,
           responseObserver);
     }
@@ -698,7 +767,7 @@ public final class TranslationServiceGrpc {
         io.grpc.stub.StreamObserver<com.google.cloud.translate.v3.SupportedLanguages>
             responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetSupportedLanguagesMethod(), getCallOptions()),
+          getChannel().newCall(getGetSupportedLanguagesMethodHelper(), getCallOptions()),
           request,
           responseObserver);
     }
@@ -719,7 +788,7 @@ public final class TranslationServiceGrpc {
         com.google.cloud.translate.v3.BatchTranslateTextRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getBatchTranslateTextMethod(), getCallOptions()),
+          getChannel().newCall(getBatchTranslateTextMethodHelper(), getCallOptions()),
           request,
           responseObserver);
     }
@@ -736,7 +805,7 @@ public final class TranslationServiceGrpc {
         com.google.cloud.translate.v3.CreateGlossaryRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getCreateGlossaryMethod(), getCallOptions()),
+          getChannel().newCall(getCreateGlossaryMethodHelper(), getCallOptions()),
           request,
           responseObserver);
     }
@@ -754,7 +823,7 @@ public final class TranslationServiceGrpc {
         io.grpc.stub.StreamObserver<com.google.cloud.translate.v3.ListGlossariesResponse>
             responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getListGlossariesMethod(), getCallOptions()),
+          getChannel().newCall(getListGlossariesMethodHelper(), getCallOptions()),
           request,
           responseObserver);
     }
@@ -771,7 +840,7 @@ public final class TranslationServiceGrpc {
         com.google.cloud.translate.v3.GetGlossaryRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.translate.v3.Glossary> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getGetGlossaryMethod(), getCallOptions()),
+          getChannel().newCall(getGetGlossaryMethodHelper(), getCallOptions()),
           request,
           responseObserver);
     }
@@ -789,7 +858,7 @@ public final class TranslationServiceGrpc {
         com.google.cloud.translate.v3.DeleteGlossaryRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
       asyncUnaryCall(
-          getChannel().newCall(getDeleteGlossaryMethod(), getCallOptions()),
+          getChannel().newCall(getDeleteGlossaryMethodHelper(), getCallOptions()),
           request,
           responseObserver);
     }
@@ -803,7 +872,11 @@ public final class TranslationServiceGrpc {
    * </pre>
    */
   public static final class TranslationServiceBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<TranslationServiceBlockingStub> {
+      extends io.grpc.stub.AbstractStub<TranslationServiceBlockingStub> {
+    private TranslationServiceBlockingStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
     private TranslationServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -824,7 +897,8 @@ public final class TranslationServiceGrpc {
      */
     public com.google.cloud.translate.v3.TranslateTextResponse translateText(
         com.google.cloud.translate.v3.TranslateTextRequest request) {
-      return blockingUnaryCall(getChannel(), getTranslateTextMethod(), getCallOptions(), request);
+      return blockingUnaryCall(
+          getChannel(), getTranslateTextMethodHelper(), getCallOptions(), request);
     }
 
     /**
@@ -836,7 +910,8 @@ public final class TranslationServiceGrpc {
      */
     public com.google.cloud.translate.v3.DetectLanguageResponse detectLanguage(
         com.google.cloud.translate.v3.DetectLanguageRequest request) {
-      return blockingUnaryCall(getChannel(), getDetectLanguageMethod(), getCallOptions(), request);
+      return blockingUnaryCall(
+          getChannel(), getDetectLanguageMethodHelper(), getCallOptions(), request);
     }
 
     /**
@@ -849,7 +924,7 @@ public final class TranslationServiceGrpc {
     public com.google.cloud.translate.v3.SupportedLanguages getSupportedLanguages(
         com.google.cloud.translate.v3.GetSupportedLanguagesRequest request) {
       return blockingUnaryCall(
-          getChannel(), getGetSupportedLanguagesMethod(), getCallOptions(), request);
+          getChannel(), getGetSupportedLanguagesMethodHelper(), getCallOptions(), request);
     }
 
     /**
@@ -867,7 +942,7 @@ public final class TranslationServiceGrpc {
     public com.google.longrunning.Operation batchTranslateText(
         com.google.cloud.translate.v3.BatchTranslateTextRequest request) {
       return blockingUnaryCall(
-          getChannel(), getBatchTranslateTextMethod(), getCallOptions(), request);
+          getChannel(), getBatchTranslateTextMethodHelper(), getCallOptions(), request);
     }
 
     /**
@@ -880,7 +955,8 @@ public final class TranslationServiceGrpc {
      */
     public com.google.longrunning.Operation createGlossary(
         com.google.cloud.translate.v3.CreateGlossaryRequest request) {
-      return blockingUnaryCall(getChannel(), getCreateGlossaryMethod(), getCallOptions(), request);
+      return blockingUnaryCall(
+          getChannel(), getCreateGlossaryMethodHelper(), getCallOptions(), request);
     }
 
     /**
@@ -893,7 +969,8 @@ public final class TranslationServiceGrpc {
      */
     public com.google.cloud.translate.v3.ListGlossariesResponse listGlossaries(
         com.google.cloud.translate.v3.ListGlossariesRequest request) {
-      return blockingUnaryCall(getChannel(), getListGlossariesMethod(), getCallOptions(), request);
+      return blockingUnaryCall(
+          getChannel(), getListGlossariesMethodHelper(), getCallOptions(), request);
     }
 
     /**
@@ -906,7 +983,8 @@ public final class TranslationServiceGrpc {
      */
     public com.google.cloud.translate.v3.Glossary getGlossary(
         com.google.cloud.translate.v3.GetGlossaryRequest request) {
-      return blockingUnaryCall(getChannel(), getGetGlossaryMethod(), getCallOptions(), request);
+      return blockingUnaryCall(
+          getChannel(), getGetGlossaryMethodHelper(), getCallOptions(), request);
     }
 
     /**
@@ -920,7 +998,8 @@ public final class TranslationServiceGrpc {
      */
     public com.google.longrunning.Operation deleteGlossary(
         com.google.cloud.translate.v3.DeleteGlossaryRequest request) {
-      return blockingUnaryCall(getChannel(), getDeleteGlossaryMethod(), getCallOptions(), request);
+      return blockingUnaryCall(
+          getChannel(), getDeleteGlossaryMethodHelper(), getCallOptions(), request);
     }
   }
 
@@ -932,7 +1011,11 @@ public final class TranslationServiceGrpc {
    * </pre>
    */
   public static final class TranslationServiceFutureStub
-      extends io.grpc.stub.AbstractFutureStub<TranslationServiceFutureStub> {
+      extends io.grpc.stub.AbstractStub<TranslationServiceFutureStub> {
+    private TranslationServiceFutureStub(io.grpc.Channel channel) {
+      super(channel);
+    }
+
     private TranslationServiceFutureStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
@@ -954,7 +1037,7 @@ public final class TranslationServiceGrpc {
             com.google.cloud.translate.v3.TranslateTextResponse>
         translateText(com.google.cloud.translate.v3.TranslateTextRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getTranslateTextMethod(), getCallOptions()), request);
+          getChannel().newCall(getTranslateTextMethodHelper(), getCallOptions()), request);
     }
 
     /**
@@ -968,7 +1051,7 @@ public final class TranslationServiceGrpc {
             com.google.cloud.translate.v3.DetectLanguageResponse>
         detectLanguage(com.google.cloud.translate.v3.DetectLanguageRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getDetectLanguageMethod(), getCallOptions()), request);
+          getChannel().newCall(getDetectLanguageMethodHelper(), getCallOptions()), request);
     }
 
     /**
@@ -982,7 +1065,7 @@ public final class TranslationServiceGrpc {
             com.google.cloud.translate.v3.SupportedLanguages>
         getSupportedLanguages(com.google.cloud.translate.v3.GetSupportedLanguagesRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetSupportedLanguagesMethod(), getCallOptions()), request);
+          getChannel().newCall(getGetSupportedLanguagesMethodHelper(), getCallOptions()), request);
     }
 
     /**
@@ -1000,7 +1083,7 @@ public final class TranslationServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation>
         batchTranslateText(com.google.cloud.translate.v3.BatchTranslateTextRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getBatchTranslateTextMethod(), getCallOptions()), request);
+          getChannel().newCall(getBatchTranslateTextMethodHelper(), getCallOptions()), request);
     }
 
     /**
@@ -1014,7 +1097,7 @@ public final class TranslationServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation>
         createGlossary(com.google.cloud.translate.v3.CreateGlossaryRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getCreateGlossaryMethod(), getCallOptions()), request);
+          getChannel().newCall(getCreateGlossaryMethodHelper(), getCallOptions()), request);
     }
 
     /**
@@ -1029,7 +1112,7 @@ public final class TranslationServiceGrpc {
             com.google.cloud.translate.v3.ListGlossariesResponse>
         listGlossaries(com.google.cloud.translate.v3.ListGlossariesRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getListGlossariesMethod(), getCallOptions()), request);
+          getChannel().newCall(getListGlossariesMethodHelper(), getCallOptions()), request);
     }
 
     /**
@@ -1044,7 +1127,7 @@ public final class TranslationServiceGrpc {
             com.google.cloud.translate.v3.Glossary>
         getGlossary(com.google.cloud.translate.v3.GetGlossaryRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getGetGlossaryMethod(), getCallOptions()), request);
+          getChannel().newCall(getGetGlossaryMethodHelper(), getCallOptions()), request);
     }
 
     /**
@@ -1059,7 +1142,7 @@ public final class TranslationServiceGrpc {
     public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation>
         deleteGlossary(com.google.cloud.translate.v3.DeleteGlossaryRequest request) {
       return futureUnaryCall(
-          getChannel().newCall(getDeleteGlossaryMethod(), getCallOptions()), request);
+          getChannel().newCall(getDeleteGlossaryMethodHelper(), getCallOptions()), request);
     }
   }
 
@@ -1198,14 +1281,14 @@ public final class TranslationServiceGrpc {
               result =
                   io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
                       .setSchemaDescriptor(new TranslationServiceFileDescriptorSupplier())
-                      .addMethod(getTranslateTextMethod())
-                      .addMethod(getDetectLanguageMethod())
-                      .addMethod(getGetSupportedLanguagesMethod())
-                      .addMethod(getBatchTranslateTextMethod())
-                      .addMethod(getCreateGlossaryMethod())
-                      .addMethod(getListGlossariesMethod())
-                      .addMethod(getGetGlossaryMethod())
-                      .addMethod(getDeleteGlossaryMethod())
+                      .addMethod(getTranslateTextMethodHelper())
+                      .addMethod(getDetectLanguageMethodHelper())
+                      .addMethod(getGetSupportedLanguagesMethodHelper())
+                      .addMethod(getBatchTranslateTextMethodHelper())
+                      .addMethod(getCreateGlossaryMethodHelper())
+                      .addMethod(getListGlossariesMethodHelper())
+                      .addMethod(getGetGlossaryMethodHelper())
+                      .addMethod(getDeleteGlossaryMethodHelper())
                       .build();
         }
       }
