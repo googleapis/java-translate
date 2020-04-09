@@ -1,6 +1,13 @@
 {
-  "updateTime": "2020-04-07T01:14:47.682114Z",
+  "updateTime": "2020-04-09T12:21:20.786096Z",
   "sources": [
+    {
+      "git": {
+        "name": ".",
+        "remote": "https://github.com/googleapis/java-translate.git",
+        "sha": "79dd769efd7d13e570d728555edd837948199899"
+      }
+    },
     {
       "git": {
         "name": "googleapis",
