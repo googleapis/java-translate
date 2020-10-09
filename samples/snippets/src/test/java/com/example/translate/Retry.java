@@ -22,10 +22,10 @@ import org.junit.runner.Description;
 import org.junit.runners.model.Statement;
 
 public class Retry implements TestRule {
-  private int retryCount;
+  private int maxAttempts;
 
-  public Retry(int retryCount) {
-    this.retryCount = retryCount;
+  public Retry(int maxAttempts) {
+    this.maxAttempts = maxAttempts;
   }
 
   @Override
@@ -40,17 +40,24 @@ public class Retry implements TestRule {
         Throwable caughtThrowable = null;
 
         // implement retry logic here
-        for (int i = 0; i < retryCount; i++) {
+        int factor = 1;
+        for (int attempt = 0; attempt < maxAttempts; attempt++) {
           try {
             base.evaluate();
             return;
           } catch (Throwable t) {
             caughtThrowable = t;
-            System.out.println(description.getDisplayName() + ": run " + (i + 1) + " failed");
+
+            // random_number_milliseconds that is less than or equal to 1000.
+            int randomNumberMilliseconds = (int) Math.floor(Math.random() * 1000) + 1;
+            Thread.sleep(1300 * factor + randomNumberMilliseconds);
+            System.out.println(description.getDisplayName() + ": run " + (attempt + 1) + " failed");
+            factor += 1;
+
           }
         }
         System.out.println(
-            description.getDisplayName() + ": giving up after " + retryCount + " failures");
+            description.getDisplayName() + ": giving up after " + maxAttempts + " failures");
         throw Objects.requireNonNull(caughtThrowable);
       }
     };
