@@ -105,6 +105,7 @@ public class BatchTranslateTextWithModel {
       // random number between 300 - 450 (maximum allowed seconds)
       long randomNumber = ThreadLocalRandom.current().nextInt(300, 450);
       BatchTranslateResponse response = future.get(randomNumber, TimeUnit.SECONDS);
+
       // Display the translation for each input text provided
       System.out.printf("Total Characters: %s\n", response.getTotalCharacters());
       System.out.printf("Translated Characters: %s\n", response.getTranslatedCharacters());
