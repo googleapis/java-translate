@@ -97,9 +97,9 @@ public class TranslationServiceClientTest {
     TranslateTextRequest request =
         TranslateTextRequest.newBuilder()
             .addAllContents(new ArrayList<String>())
-            .setMimeType("mime_type-196041627")
-            .setSourceLanguageCode("source_language_code1687263568")
-            .setTargetLanguageCode("target_language_code1323228230")
+            .setMimeType("mimeType-1392120434")
+            .setSourceLanguageCode("sourceLanguageCode1645917472")
+            .setTargetLanguageCode("targetLanguageCode-106414698")
             .setParent(LocationName.of("[PROJECT]", "[LOCATION]").toString())
             .setModel("model104069929")
             .setGlossaryConfig(TranslateTextGlossaryConfig.newBuilder().build())
@@ -136,9 +136,9 @@ public class TranslationServiceClientTest {
       TranslateTextRequest request =
           TranslateTextRequest.newBuilder()
               .addAllContents(new ArrayList<String>())
-              .setMimeType("mime_type-196041627")
-              .setSourceLanguageCode("source_language_code1687263568")
-              .setTargetLanguageCode("target_language_code1323228230")
+              .setMimeType("mimeType-1392120434")
+              .setSourceLanguageCode("sourceLanguageCode1645917472")
+              .setTargetLanguageCode("targetLanguageCode-106414698")
               .setParent(LocationName.of("[PROJECT]", "[LOCATION]").toString())
               .setModel("model104069929")
               .setGlossaryConfig(TranslateTextGlossaryConfig.newBuilder().build())
@@ -161,7 +161,7 @@ public class TranslationServiceClientTest {
 
     LocationName parent = LocationName.of("[PROJECT]", "[LOCATION]");
     String model = "model104069929";
-    String mimeType = "mime_type-196041627";
+    String mimeType = "mimeType-1392120434";
 
     DetectLanguageResponse actualResponse = client.detectLanguage(parent, model, mimeType);
     Assert.assertEquals(expectedResponse, actualResponse);
@@ -187,7 +187,7 @@ public class TranslationServiceClientTest {
     try {
       LocationName parent = LocationName.of("[PROJECT]", "[LOCATION]");
       String model = "model104069929";
-      String mimeType = "mime_type-196041627";
+      String mimeType = "mimeType-1392120434";
       client.detectLanguage(parent, model, mimeType);
       Assert.fail("No exception raised");
     } catch (InvalidArgumentException e) {
@@ -205,7 +205,7 @@ public class TranslationServiceClientTest {
 
     String parent = "parent-995424086";
     String model = "model104069929";
-    String mimeType = "mime_type-196041627";
+    String mimeType = "mimeType-1392120434";
 
     DetectLanguageResponse actualResponse = client.detectLanguage(parent, model, mimeType);
     Assert.assertEquals(expectedResponse, actualResponse);
@@ -231,7 +231,7 @@ public class TranslationServiceClientTest {
     try {
       String parent = "parent-995424086";
       String model = "model104069929";
-      String mimeType = "mime_type-196041627";
+      String mimeType = "mimeType-1392120434";
       client.detectLanguage(parent, model, mimeType);
       Assert.fail("No exception raised");
     } catch (InvalidArgumentException e) {
@@ -246,7 +246,7 @@ public class TranslationServiceClientTest {
     mockTranslationService.addResponse(expectedResponse);
 
     LocationName parent = LocationName.of("[PROJECT]", "[LOCATION]");
-    String displayLanguageCode = "display_language_code30710199";
+    String displayLanguageCode = "displayLanguageCode-1457478841";
     String model = "model104069929";
 
     SupportedLanguages actualResponse =
@@ -274,7 +274,7 @@ public class TranslationServiceClientTest {
 
     try {
       LocationName parent = LocationName.of("[PROJECT]", "[LOCATION]");
-      String displayLanguageCode = "display_language_code30710199";
+      String displayLanguageCode = "displayLanguageCode-1457478841";
       String model = "model104069929";
       client.getSupportedLanguages(parent, displayLanguageCode, model);
       Assert.fail("No exception raised");
@@ -290,7 +290,7 @@ public class TranslationServiceClientTest {
     mockTranslationService.addResponse(expectedResponse);
 
     String parent = "parent-995424086";
-    String displayLanguageCode = "display_language_code30710199";
+    String displayLanguageCode = "displayLanguageCode-1457478841";
     String model = "model104069929";
 
     SupportedLanguages actualResponse =
@@ -318,7 +318,7 @@ public class TranslationServiceClientTest {
 
     try {
       String parent = "parent-995424086";
-      String displayLanguageCode = "display_language_code30710199";
+      String displayLanguageCode = "displayLanguageCode-1457478841";
       String model = "model104069929";
       client.getSupportedLanguages(parent, displayLanguageCode, model);
       Assert.fail("No exception raised");
@@ -348,7 +348,7 @@ public class TranslationServiceClientTest {
     BatchTranslateTextRequest request =
         BatchTranslateTextRequest.newBuilder()
             .setParent(LocationName.of("[PROJECT]", "[LOCATION]").toString())
-            .setSourceLanguageCode("source_language_code1687263568")
+            .setSourceLanguageCode("sourceLanguageCode1645917472")
             .addAllTargetLanguageCodes(new ArrayList<String>())
             .putAllModels(new HashMap<String, String>())
             .addAllInputConfigs(new ArrayList<InputConfig>())
@@ -388,7 +388,7 @@ public class TranslationServiceClientTest {
       BatchTranslateTextRequest request =
           BatchTranslateTextRequest.newBuilder()
               .setParent(LocationName.of("[PROJECT]", "[LOCATION]").toString())
-              .setSourceLanguageCode("source_language_code1687263568")
+              .setSourceLanguageCode("sourceLanguageCode1645917472")
               .addAllTargetLanguageCodes(new ArrayList<String>())
               .putAllModels(new HashMap<String, String>())
               .addAllInputConfigs(new ArrayList<InputConfig>())
