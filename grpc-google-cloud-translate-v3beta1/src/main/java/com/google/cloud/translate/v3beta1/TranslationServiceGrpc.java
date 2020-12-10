@@ -22,7 +22,13 @@ import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
-/** */
+/**
+ *
+ *
+ * <pre>
+ * Provides natural language translation operations.
+ * </pre>
+ */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
     comments = "Source: google/cloud/translate/v3beta1/translation_service.proto")
@@ -451,10 +457,22 @@ public final class TranslationServiceGrpc {
     return TranslationServiceFutureStub.newStub(factory, channel);
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * Provides natural language translation operations.
+   * </pre>
+   */
   public abstract static class TranslationServiceImplBase implements io.grpc.BindableService {
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Translates input text and returns translated text.
+     * </pre>
+     */
     public void translateText(
         com.google.cloud.translate.v3beta1.TranslateTextRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.translate.v3beta1.TranslateTextResponse>
@@ -462,7 +480,13 @@ public final class TranslationServiceGrpc {
       asyncUnimplementedUnaryCall(getTranslateTextMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Detects the language of text within a request.
+     * </pre>
+     */
     public void detectLanguage(
         com.google.cloud.translate.v3beta1.DetectLanguageRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.translate.v3beta1.DetectLanguageResponse>
@@ -470,7 +494,13 @@ public final class TranslationServiceGrpc {
       asyncUnimplementedUnaryCall(getDetectLanguageMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Returns a list of supported languages for translation.
+     * </pre>
+     */
     public void getSupportedLanguages(
         com.google.cloud.translate.v3beta1.GetSupportedLanguagesRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.translate.v3beta1.SupportedLanguages>
@@ -478,21 +508,46 @@ public final class TranslationServiceGrpc {
       asyncUnimplementedUnaryCall(getGetSupportedLanguagesMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Translates a large volume of text in asynchronous batch mode.
+     * This function provides real-time output as the inputs are being processed.
+     * If caller cancels a request, the partial results (for an input file, it's
+     * all or nothing) may still be available on the specified output location.
+     * This call returns immediately and you can
+     * use google.longrunning.Operation.name to poll the status of the call.
+     * </pre>
+     */
     public void batchTranslateText(
         com.google.cloud.translate.v3beta1.BatchTranslateTextRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getBatchTranslateTextMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Creates a glossary and returns the long-running operation. Returns
+     * NOT_FOUND, if the project doesn't exist.
+     * </pre>
+     */
     public void createGlossary(
         com.google.cloud.translate.v3beta1.CreateGlossaryRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getCreateGlossaryMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Lists glossaries in a project. Returns NOT_FOUND, if the project doesn't
+     * exist.
+     * </pre>
+     */
     public void listGlossaries(
         com.google.cloud.translate.v3beta1.ListGlossariesRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.translate.v3beta1.ListGlossariesResponse>
@@ -500,14 +555,29 @@ public final class TranslationServiceGrpc {
       asyncUnimplementedUnaryCall(getListGlossariesMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Gets a glossary. Returns NOT_FOUND, if the glossary doesn't
+     * exist.
+     * </pre>
+     */
     public void getGlossary(
         com.google.cloud.translate.v3beta1.GetGlossaryRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.translate.v3beta1.Glossary> responseObserver) {
       asyncUnimplementedUnaryCall(getGetGlossaryMethod(), responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Deletes a glossary, or cancels glossary construction
+     * if the glossary isn't created yet.
+     * Returns NOT_FOUND, if the glossary doesn't exist.
+     * </pre>
+     */
     public void deleteGlossary(
         com.google.cloud.translate.v3beta1.DeleteGlossaryRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
@@ -573,7 +643,13 @@ public final class TranslationServiceGrpc {
     }
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * Provides natural language translation operations.
+   * </pre>
+   */
   public static final class TranslationServiceStub
       extends io.grpc.stub.AbstractAsyncStub<TranslationServiceStub> {
     private TranslationServiceStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -586,7 +662,13 @@ public final class TranslationServiceGrpc {
       return new TranslationServiceStub(channel, callOptions);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Translates input text and returns translated text.
+     * </pre>
+     */
     public void translateText(
         com.google.cloud.translate.v3beta1.TranslateTextRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.translate.v3beta1.TranslateTextResponse>
@@ -597,7 +679,13 @@ public final class TranslationServiceGrpc {
           responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Detects the language of text within a request.
+     * </pre>
+     */
     public void detectLanguage(
         com.google.cloud.translate.v3beta1.DetectLanguageRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.translate.v3beta1.DetectLanguageResponse>
@@ -608,7 +696,13 @@ public final class TranslationServiceGrpc {
           responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Returns a list of supported languages for translation.
+     * </pre>
+     */
     public void getSupportedLanguages(
         com.google.cloud.translate.v3beta1.GetSupportedLanguagesRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.translate.v3beta1.SupportedLanguages>
@@ -619,7 +713,18 @@ public final class TranslationServiceGrpc {
           responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Translates a large volume of text in asynchronous batch mode.
+     * This function provides real-time output as the inputs are being processed.
+     * If caller cancels a request, the partial results (for an input file, it's
+     * all or nothing) may still be available on the specified output location.
+     * This call returns immediately and you can
+     * use google.longrunning.Operation.name to poll the status of the call.
+     * </pre>
+     */
     public void batchTranslateText(
         com.google.cloud.translate.v3beta1.BatchTranslateTextRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
@@ -629,7 +734,14 @@ public final class TranslationServiceGrpc {
           responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Creates a glossary and returns the long-running operation. Returns
+     * NOT_FOUND, if the project doesn't exist.
+     * </pre>
+     */
     public void createGlossary(
         com.google.cloud.translate.v3beta1.CreateGlossaryRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
@@ -639,7 +751,14 @@ public final class TranslationServiceGrpc {
           responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Lists glossaries in a project. Returns NOT_FOUND, if the project doesn't
+     * exist.
+     * </pre>
+     */
     public void listGlossaries(
         com.google.cloud.translate.v3beta1.ListGlossariesRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.translate.v3beta1.ListGlossariesResponse>
@@ -650,7 +769,14 @@ public final class TranslationServiceGrpc {
           responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Gets a glossary. Returns NOT_FOUND, if the glossary doesn't
+     * exist.
+     * </pre>
+     */
     public void getGlossary(
         com.google.cloud.translate.v3beta1.GetGlossaryRequest request,
         io.grpc.stub.StreamObserver<com.google.cloud.translate.v3beta1.Glossary> responseObserver) {
@@ -660,7 +786,15 @@ public final class TranslationServiceGrpc {
           responseObserver);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Deletes a glossary, or cancels glossary construction
+     * if the glossary isn't created yet.
+     * Returns NOT_FOUND, if the glossary doesn't exist.
+     * </pre>
+     */
     public void deleteGlossary(
         com.google.cloud.translate.v3beta1.DeleteGlossaryRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
@@ -671,7 +805,13 @@ public final class TranslationServiceGrpc {
     }
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * Provides natural language translation operations.
+   * </pre>
+   */
   public static final class TranslationServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<TranslationServiceBlockingStub> {
     private TranslationServiceBlockingStub(
@@ -685,58 +825,122 @@ public final class TranslationServiceGrpc {
       return new TranslationServiceBlockingStub(channel, callOptions);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Translates input text and returns translated text.
+     * </pre>
+     */
     public com.google.cloud.translate.v3beta1.TranslateTextResponse translateText(
         com.google.cloud.translate.v3beta1.TranslateTextRequest request) {
       return blockingUnaryCall(getChannel(), getTranslateTextMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Detects the language of text within a request.
+     * </pre>
+     */
     public com.google.cloud.translate.v3beta1.DetectLanguageResponse detectLanguage(
         com.google.cloud.translate.v3beta1.DetectLanguageRequest request) {
       return blockingUnaryCall(getChannel(), getDetectLanguageMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Returns a list of supported languages for translation.
+     * </pre>
+     */
     public com.google.cloud.translate.v3beta1.SupportedLanguages getSupportedLanguages(
         com.google.cloud.translate.v3beta1.GetSupportedLanguagesRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetSupportedLanguagesMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Translates a large volume of text in asynchronous batch mode.
+     * This function provides real-time output as the inputs are being processed.
+     * If caller cancels a request, the partial results (for an input file, it's
+     * all or nothing) may still be available on the specified output location.
+     * This call returns immediately and you can
+     * use google.longrunning.Operation.name to poll the status of the call.
+     * </pre>
+     */
     public com.google.longrunning.Operation batchTranslateText(
         com.google.cloud.translate.v3beta1.BatchTranslateTextRequest request) {
       return blockingUnaryCall(
           getChannel(), getBatchTranslateTextMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Creates a glossary and returns the long-running operation. Returns
+     * NOT_FOUND, if the project doesn't exist.
+     * </pre>
+     */
     public com.google.longrunning.Operation createGlossary(
         com.google.cloud.translate.v3beta1.CreateGlossaryRequest request) {
       return blockingUnaryCall(getChannel(), getCreateGlossaryMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Lists glossaries in a project. Returns NOT_FOUND, if the project doesn't
+     * exist.
+     * </pre>
+     */
     public com.google.cloud.translate.v3beta1.ListGlossariesResponse listGlossaries(
         com.google.cloud.translate.v3beta1.ListGlossariesRequest request) {
       return blockingUnaryCall(getChannel(), getListGlossariesMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Gets a glossary. Returns NOT_FOUND, if the glossary doesn't
+     * exist.
+     * </pre>
+     */
     public com.google.cloud.translate.v3beta1.Glossary getGlossary(
         com.google.cloud.translate.v3beta1.GetGlossaryRequest request) {
       return blockingUnaryCall(getChannel(), getGetGlossaryMethod(), getCallOptions(), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Deletes a glossary, or cancels glossary construction
+     * if the glossary isn't created yet.
+     * Returns NOT_FOUND, if the glossary doesn't exist.
+     * </pre>
+     */
     public com.google.longrunning.Operation deleteGlossary(
         com.google.cloud.translate.v3beta1.DeleteGlossaryRequest request) {
       return blockingUnaryCall(getChannel(), getDeleteGlossaryMethod(), getCallOptions(), request);
     }
   }
 
-  /** */
+  /**
+   *
+   *
+   * <pre>
+   * Provides natural language translation operations.
+   * </pre>
+   */
   public static final class TranslationServiceFutureStub
       extends io.grpc.stub.AbstractFutureStub<TranslationServiceFutureStub> {
     private TranslationServiceFutureStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -749,7 +953,13 @@ public final class TranslationServiceGrpc {
       return new TranslationServiceFutureStub(channel, callOptions);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Translates input text and returns translated text.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.translate.v3beta1.TranslateTextResponse>
         translateText(com.google.cloud.translate.v3beta1.TranslateTextRequest request) {
@@ -757,7 +967,13 @@ public final class TranslationServiceGrpc {
           getChannel().newCall(getTranslateTextMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Detects the language of text within a request.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.translate.v3beta1.DetectLanguageResponse>
         detectLanguage(com.google.cloud.translate.v3beta1.DetectLanguageRequest request) {
@@ -765,7 +981,13 @@ public final class TranslationServiceGrpc {
           getChannel().newCall(getDetectLanguageMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Returns a list of supported languages for translation.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.translate.v3beta1.SupportedLanguages>
         getSupportedLanguages(
@@ -774,21 +996,46 @@ public final class TranslationServiceGrpc {
           getChannel().newCall(getGetSupportedLanguagesMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Translates a large volume of text in asynchronous batch mode.
+     * This function provides real-time output as the inputs are being processed.
+     * If caller cancels a request, the partial results (for an input file, it's
+     * all or nothing) may still be available on the specified output location.
+     * This call returns immediately and you can
+     * use google.longrunning.Operation.name to poll the status of the call.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation>
         batchTranslateText(com.google.cloud.translate.v3beta1.BatchTranslateTextRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getBatchTranslateTextMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Creates a glossary and returns the long-running operation. Returns
+     * NOT_FOUND, if the project doesn't exist.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation>
         createGlossary(com.google.cloud.translate.v3beta1.CreateGlossaryRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getCreateGlossaryMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Lists glossaries in a project. Returns NOT_FOUND, if the project doesn't
+     * exist.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.translate.v3beta1.ListGlossariesResponse>
         listGlossaries(com.google.cloud.translate.v3beta1.ListGlossariesRequest request) {
@@ -796,7 +1043,14 @@ public final class TranslationServiceGrpc {
           getChannel().newCall(getListGlossariesMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Gets a glossary. Returns NOT_FOUND, if the glossary doesn't
+     * exist.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.cloud.translate.v3beta1.Glossary>
         getGlossary(com.google.cloud.translate.v3beta1.GetGlossaryRequest request) {
@@ -804,7 +1058,15 @@ public final class TranslationServiceGrpc {
           getChannel().newCall(getGetGlossaryMethod(), getCallOptions()), request);
     }
 
-    /** */
+    /**
+     *
+     *
+     * <pre>
+     * Deletes a glossary, or cancels glossary construction
+     * if the glossary isn't created yet.
+     * Returns NOT_FOUND, if the glossary doesn't exist.
+     * </pre>
+     */
     public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation>
         deleteGlossary(com.google.cloud.translate.v3beta1.DeleteGlossaryRequest request) {
       return futureUnaryCall(
