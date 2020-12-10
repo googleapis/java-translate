@@ -191,11 +191,21 @@ public class GrpcTranslationServiceStub extends TranslationServiceStub {
         TranslationServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcTranslationServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcTranslationServiceStub(
       TranslationServiceStubSettings settings, ClientContext clientContext) throws IOException {
     this(settings, clientContext, new GrpcTranslationServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcTranslationServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcTranslationServiceStub(
       TranslationServiceStubSettings settings,
       ClientContext clientContext,
