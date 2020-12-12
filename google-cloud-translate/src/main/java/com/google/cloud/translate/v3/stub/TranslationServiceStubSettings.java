@@ -69,7 +69,6 @@ import com.google.common.collect.Lists;
 import com.google.longrunning.Operation;
 import java.io.IOException;
 import java.util.List;
-import java.util.Objects;
 import javax.annotation.Generated;
 import org.threeten.bp.Duration;
 
@@ -169,7 +168,7 @@ public class TranslationServiceStubSettings extends StubSettings<TranslationServ
 
             @Override
             public Iterable<Glossary> extractResources(ListGlossariesResponse payload) {
-              return Objects.isNull(payload.getGlossariesList())
+              return payload.getGlossariesList() == null
                   ? ImmutableList.<Glossary>of()
                   : payload.getGlossariesList();
             }

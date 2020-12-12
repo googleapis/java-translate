@@ -35,7 +35,6 @@ import com.google.longrunning.Operation;
 import com.google.longrunning.OperationsClient;
 import java.io.IOException;
 import java.util.List;
-import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
@@ -182,7 +181,7 @@ public class TranslationServiceClient implements BackgroundResource {
       LocationName parent, String targetLanguageCode, List<String> contents) {
     TranslateTextRequest request =
         TranslateTextRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setTargetLanguageCode(targetLanguageCode)
             .addAllContents(contents)
             .build();
@@ -261,7 +260,7 @@ public class TranslationServiceClient implements BackgroundResource {
       List<String> contents) {
     TranslateTextRequest request =
         TranslateTextRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setModel(model)
             .setMimeType(mimeType)
             .setSourceLanguageCode(sourceLanguageCode)
@@ -371,7 +370,7 @@ public class TranslationServiceClient implements BackgroundResource {
       LocationName parent, String model, String mimeType, String content) {
     DetectLanguageRequest request =
         DetectLanguageRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setModel(model)
             .setMimeType(mimeType)
             .setContent(content)
@@ -465,7 +464,7 @@ public class TranslationServiceClient implements BackgroundResource {
       LocationName parent, String model, String displayLanguageCode) {
     GetSupportedLanguagesRequest request =
         GetSupportedLanguagesRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setModel(model)
             .setDisplayLanguageCode(displayLanguageCode)
             .build();
@@ -593,7 +592,7 @@ public class TranslationServiceClient implements BackgroundResource {
       LocationName parent, Glossary glossary) {
     CreateGlossaryRequest request =
         CreateGlossaryRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setGlossary(glossary)
             .build();
     return createGlossaryAsync(request);
@@ -661,7 +660,7 @@ public class TranslationServiceClient implements BackgroundResource {
   public final ListGlossariesPagedResponse listGlossaries(LocationName parent) {
     ListGlossariesRequest request =
         ListGlossariesRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .build();
     return listGlossaries(request);
   }
@@ -720,9 +719,7 @@ public class TranslationServiceClient implements BackgroundResource {
    */
   public final Glossary getGlossary(GlossaryName name) {
     GetGlossaryRequest request =
-        GetGlossaryRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
-            .build();
+        GetGlossaryRequest.newBuilder().setName(name == null ? null : name.toString()).build();
     return getGlossary(request);
   }
 
@@ -770,9 +767,7 @@ public class TranslationServiceClient implements BackgroundResource {
   public final OperationFuture<DeleteGlossaryResponse, DeleteGlossaryMetadata> deleteGlossaryAsync(
       GlossaryName name) {
     DeleteGlossaryRequest request =
-        DeleteGlossaryRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
-            .build();
+        DeleteGlossaryRequest.newBuilder().setName(name == null ? null : name.toString()).build();
     return deleteGlossaryAsync(request);
   }
 

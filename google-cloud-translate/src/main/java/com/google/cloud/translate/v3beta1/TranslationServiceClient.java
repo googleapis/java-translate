@@ -35,7 +35,6 @@ import com.google.longrunning.Operation;
 import com.google.longrunning.OperationsClient;
 import java.io.IOException;
 import java.util.List;
-import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
@@ -205,7 +204,7 @@ public class TranslationServiceClient implements BackgroundResource {
       LocationName parent, String model, String mimeType) {
     DetectLanguageRequest request =
         DetectLanguageRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setModel(model)
             .setMimeType(mimeType)
             .build();
@@ -293,7 +292,7 @@ public class TranslationServiceClient implements BackgroundResource {
       LocationName parent, String displayLanguageCode, String model) {
     GetSupportedLanguagesRequest request =
         GetSupportedLanguagesRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setDisplayLanguageCode(displayLanguageCode)
             .setModel(model)
             .build();
@@ -420,7 +419,7 @@ public class TranslationServiceClient implements BackgroundResource {
       LocationName parent, Glossary glossary) {
     CreateGlossaryRequest request =
         CreateGlossaryRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setGlossary(glossary)
             .build();
     return createGlossaryAsync(request);
@@ -488,7 +487,7 @@ public class TranslationServiceClient implements BackgroundResource {
   public final ListGlossariesPagedResponse listGlossaries(LocationName parent) {
     ListGlossariesRequest request =
         ListGlossariesRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .build();
     return listGlossaries(request);
   }
@@ -518,7 +517,7 @@ public class TranslationServiceClient implements BackgroundResource {
   public final ListGlossariesPagedResponse listGlossaries(LocationName parent, String filter) {
     ListGlossariesRequest request =
         ListGlossariesRequest.newBuilder()
-            .setParent(Objects.isNull(parent) ? null : parent.toString())
+            .setParent(parent == null ? null : parent.toString())
             .setFilter(filter)
             .build();
     return listGlossaries(request);
@@ -582,9 +581,7 @@ public class TranslationServiceClient implements BackgroundResource {
    */
   public final Glossary getGlossary(GlossaryName name) {
     GetGlossaryRequest request =
-        GetGlossaryRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
-            .build();
+        GetGlossaryRequest.newBuilder().setName(name == null ? null : name.toString()).build();
     return getGlossary(request);
   }
 
@@ -632,9 +629,7 @@ public class TranslationServiceClient implements BackgroundResource {
   public final OperationFuture<DeleteGlossaryResponse, DeleteGlossaryMetadata> deleteGlossaryAsync(
       GlossaryName name) {
     DeleteGlossaryRequest request =
-        DeleteGlossaryRequest.newBuilder()
-            .setName(Objects.isNull(name) ? null : name.toString())
-            .build();
+        DeleteGlossaryRequest.newBuilder().setName(name == null ? null : name.toString()).build();
     return deleteGlossaryAsync(request);
   }
 
