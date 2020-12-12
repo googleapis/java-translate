@@ -196,7 +196,7 @@ public class TranslationServiceClient implements BackgroundResource {
    *     <p>Only one language detection model is currently supported:
    *     `projects/{project-id}/locations/{location-id}/models/language-detection/default`.
    *     <p>If not specified, the default model is used.
-   * @param mime_type Optional. The format of the source text, for example, "text/html",
+   * @param mimeType Optional. The format of the source text, for example, "text/html",
    *     "text/plain". If left blank, the MIME type defaults to "text/html".
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -227,7 +227,7 @@ public class TranslationServiceClient implements BackgroundResource {
    *     <p>Only one language detection model is currently supported:
    *     `projects/{project-id}/locations/{location-id}/models/language-detection/default`.
    *     <p>If not specified, the default model is used.
-   * @param mime_type Optional. The format of the source text, for example, "text/html",
+   * @param mimeType Optional. The format of the source text, for example, "text/html",
    *     "text/plain". If left blank, the MIME type defaults to "text/html".
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -274,7 +274,7 @@ public class TranslationServiceClient implements BackgroundResource {
    *     <p>Non-global location is required for AutoML models.
    *     <p>Only models within the same region (have same location-id) can be used, otherwise an
    *     INVALID_ARGUMENT (400) error is returned.
-   * @param display_language_code Optional. The language to use to return localized, human readable
+   * @param displayLanguageCode Optional. The language to use to return localized, human readable
    *     names of supported languages. If missing, then display names are not returned in a
    *     response.
    * @param model Optional. Get supported languages of this model.
@@ -310,7 +310,7 @@ public class TranslationServiceClient implements BackgroundResource {
    *     <p>Non-global location is required for AutoML models.
    *     <p>Only models within the same region (have same location-id) can be used, otherwise an
    *     INVALID_ARGUMENT (400) error is returned.
-   * @param display_language_code Optional. The language to use to return localized, human readable
+   * @param displayLanguageCode Optional. The language to use to return localized, human readable
    *     names of supported languages. If missing, then display names are not returned in a
    *     response.
    * @param model Optional. Get supported languages of this model.

@@ -171,7 +171,7 @@ public class TranslationServiceClient implements BackgroundResource {
    *     <p>Non-global location is required for requests using AutoML models or custom glossaries.
    *     <p>Models and glossaries must be within the same region (have same location-id), otherwise
    *     an INVALID_ARGUMENT (400) error is returned.
-   * @param target_language_code Required. The BCP-47 language code to use for translation of the
+   * @param targetLanguageCode Required. The BCP-47 language code to use for translation of the
    *     input text, set to one of the language codes listed in Language Support.
    * @param contents Required. The content of the input in string format. We recommend the total
    *     content be less than 30k codepoints. Use BatchTranslateText for larger text.
@@ -200,7 +200,7 @@ public class TranslationServiceClient implements BackgroundResource {
    *     <p>Non-global location is required for requests using AutoML models or custom glossaries.
    *     <p>Models and glossaries must be within the same region (have same location-id), otherwise
    *     an INVALID_ARGUMENT (400) error is returned.
-   * @param target_language_code Required. The BCP-47 language code to use for translation of the
+   * @param targetLanguageCode Required. The BCP-47 language code to use for translation of the
    *     input text, set to one of the language codes listed in Language Support.
    * @param contents Required. The content of the input in string format. We recommend the total
    *     content be less than 30k codepoints. Use BatchTranslateText for larger text.
@@ -239,13 +239,13 @@ public class TranslationServiceClient implements BackgroundResource {
    *     <p>For global (non-regionalized) requests, use `location-id` `global`. For example,
    *     `projects/{project-number-or-id}/locations/global/models/general/nmt`.
    *     <p>If missing, the system decides which google base model to use.
-   * @param mime_type Optional. The format of the source text, for example, "text/html",
+   * @param mimeType Optional. The format of the source text, for example, "text/html",
    *     "text/plain". If left blank, the MIME type defaults to "text/html".
-   * @param source_language_code Optional. The BCP-47 language code of the input text if known, for
+   * @param sourceLanguageCode Optional. The BCP-47 language code of the input text if known, for
    *     example, "en-US" or "sr-Latn". Supported language codes are listed in Language Support. If
    *     the source language isn't specified, the API attempts to identify the source language
    *     automatically and returns the source language within the response.
-   * @param target_language_code Required. The BCP-47 language code to use for translation of the
+   * @param targetLanguageCode Required. The BCP-47 language code to use for translation of the
    *     input text, set to one of the language codes listed in Language Support.
    * @param contents Required. The content of the input in string format. We recommend the total
    *     content be less than 30k codepoints. Use BatchTranslateText for larger text.
@@ -292,13 +292,13 @@ public class TranslationServiceClient implements BackgroundResource {
    *     <p>For global (non-regionalized) requests, use `location-id` `global`. For example,
    *     `projects/{project-number-or-id}/locations/global/models/general/nmt`.
    *     <p>If missing, the system decides which google base model to use.
-   * @param mime_type Optional. The format of the source text, for example, "text/html",
+   * @param mimeType Optional. The format of the source text, for example, "text/html",
    *     "text/plain". If left blank, the MIME type defaults to "text/html".
-   * @param source_language_code Optional. The BCP-47 language code of the input text if known, for
+   * @param sourceLanguageCode Optional. The BCP-47 language code of the input text if known, for
    *     example, "en-US" or "sr-Latn". Supported language codes are listed in Language Support. If
    *     the source language isn't specified, the API attempts to identify the source language
    *     automatically and returns the source language within the response.
-   * @param target_language_code Required. The BCP-47 language code to use for translation of the
+   * @param targetLanguageCode Required. The BCP-47 language code to use for translation of the
    *     input text, set to one of the language codes listed in Language Support.
    * @param contents Required. The content of the input in string format. We recommend the total
    *     content be less than 30k codepoints. Use BatchTranslateText for larger text.
@@ -361,7 +361,7 @@ public class TranslationServiceClient implements BackgroundResource {
    *     <p>Only one language detection model is currently supported:
    *     `projects/{project-number-or-id}/locations/{location-id}/models/language-detection/default`.
    *     <p>If not specified, the default model is used.
-   * @param mime_type Optional. The format of the source text, for example, "text/html",
+   * @param mimeType Optional. The format of the source text, for example, "text/html",
    *     "text/plain". If left blank, the MIME type defaults to "text/html".
    * @param content The content of the input stored as a string.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -395,7 +395,7 @@ public class TranslationServiceClient implements BackgroundResource {
    *     <p>Only one language detection model is currently supported:
    *     `projects/{project-number-or-id}/locations/{location-id}/models/language-detection/default`.
    *     <p>If not specified, the default model is used.
-   * @param mime_type Optional. The format of the source text, for example, "text/html",
+   * @param mimeType Optional. The format of the source text, for example, "text/html",
    *     "text/plain". If left blank, the MIME type defaults to "text/html".
    * @param content The content of the input stored as a string.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -455,7 +455,7 @@ public class TranslationServiceClient implements BackgroundResource {
    *     `projects/{project-number-or-id}/locations/{location-id}/models/general/base`
    *     <p>Returns languages supported by the specified model. If missing, we get supported
    *     languages of Google general base (PBMT) model.
-   * @param display_language_code Optional. The language to use to return localized, human readable
+   * @param displayLanguageCode Optional. The language to use to return localized, human readable
    *     names of supported languages. If missing, then display names are not returned in a
    *     response.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -492,7 +492,7 @@ public class TranslationServiceClient implements BackgroundResource {
    *     `projects/{project-number-or-id}/locations/{location-id}/models/general/base`
    *     <p>Returns languages supported by the specified model. If missing, we get supported
    *     languages of Google general base (PBMT) model.
-   * @param display_language_code Optional. The language to use to return localized, human readable
+   * @param displayLanguageCode Optional. The language to use to return localized, human readable
    *     names of supported languages. If missing, then display names are not returned in a
    *     response.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
