@@ -29,6 +29,8 @@ import java.io.PrintStream;
 import java.util.UUID;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
+
+import com.google.cloud.testing.junit4.MultipleAttemptsRule;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -49,7 +51,6 @@ public class BatchTranslateTextTests {
 
   private ByteArrayOutputStream bout;
   private PrintStream out;
-  @Rule public Retry retry = new Retry(3);
 
   private static void cleanUpBucket() {
     Storage storage = StorageOptions.getDefaultInstance().getService();
@@ -105,6 +106,9 @@ public class BatchTranslateTextTests {
     System.out.flush();
     System.setOut(originalPrintStream);
   }
+
+  @Rule
+  public MultipleAttemptsRule multipleAttemptsRule = new MultipleAttemptsRule(3);
 
   @Test
   public void testBatchTranslateText()

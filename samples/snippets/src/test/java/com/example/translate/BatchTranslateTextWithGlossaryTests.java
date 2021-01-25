@@ -31,6 +31,8 @@ import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
+
+import com.google.cloud.testing.junit4.MultipleAttemptsRule;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -122,7 +124,8 @@ public class BatchTranslateTextWithGlossaryTests {
     System.setOut(originalPrintStream);
   }
 
-  @Rule public Retry retry = new Retry(3);
+  @Rule
+  public MultipleAttemptsRule multipleAttemptsRule = new MultipleAttemptsRule(3);
 
   @Test
   public void testBatchTranslateTextWithGlossary()
