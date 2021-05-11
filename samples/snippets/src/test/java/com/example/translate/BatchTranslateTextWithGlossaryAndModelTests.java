@@ -27,8 +27,6 @@ import com.google.cloud.testing.junit4.MultipleAttemptsRule;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
@@ -100,14 +98,9 @@ public class BatchTranslateTextWithGlossaryAndModelTests {
   private PrintStream originalPrintStream;
 
   @Before
-  public void setUp() throws InterruptedException, ExecutionException, IOException {
-    // Create a glossary that can be used in the test
+  public void setUp() {
     PrintStream temp = new PrintStream(new ByteArrayOutputStream());
     System.setOut(temp);
-    List<String> languageCodes = new ArrayList<>();
-    languageCodes.add("en");
-    languageCodes.add("ja");
-    CreateGlossary.createGlossary(PROJECT_ID, GLOSSARY_ID, languageCodes, GLOSSARY_INPUT_URI);
 
     bout = new ByteArrayOutputStream();
     out = new PrintStream(bout);
@@ -116,16 +109,13 @@ public class BatchTranslateTextWithGlossaryAndModelTests {
   }
 
   @After
-  public void tearDown() throws InterruptedException, ExecutionException, IOException {
+  public void tearDown() {
     cleanUpBucket();
-    // Delete the created glossary
-    DeleteGlossary.deleteGlossary(PROJECT_ID, GLOSSARY_ID);
     System.out.flush();
     System.setOut(originalPrintStream);
   }
 
-  @Rule
-  public MultipleAttemptsRule multipleAttemptsRule = new MultipleAttemptsRule(3);
+  @Rule public MultipleAttemptsRule multipleAttemptsRule = new MultipleAttemptsRule(3);
 
   @Test
   public void testBatchTranslateTextWithGlossaryAndModel()
