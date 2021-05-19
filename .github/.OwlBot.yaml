@@ -18,7 +18,9 @@ docker:
 deep-remove-regex:
 - "/grpc-google-.*/src"
 - "/proto-google-.*/src"
-- "/google-.*/src"
+- "/google-.*/src/**/v3"
+- "/google-.*/src/**/v3beta1"
+
 
 deep-copy-regex:
 - source: "/google/cloud/translate/(v.*)/.*-java/proto-google-.*/src"
