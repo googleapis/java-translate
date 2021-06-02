@@ -78,7 +78,7 @@ public class TranslateTextWithGlossaryAndModelTests {
     TranslateTextWithGlossaryAndModel.translateTextWithGlossaryAndModel(
         PROJECT_ID, "en", "ja", "That' il do it. deception", GLOSSARY_ID, MODEL_ID);
     String got = bout.toString();
-    assertThat(got).contains("それはそうだ"); // custom model
+    assertThat(got).contains("やるよ欺く"); // custom model
     assertThat(got).contains("欺く"); // glossary
   }
 }
