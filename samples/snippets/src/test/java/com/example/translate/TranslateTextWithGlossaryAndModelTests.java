@@ -34,7 +34,7 @@ import org.junit.runners.JUnit4;
 @SuppressWarnings("checkstyle:abbreviationaswordinname")
 public class TranslateTextWithGlossaryAndModelTests {
   private static final String PROJECT_ID = System.getenv("GOOGLE_CLOUD_PROJECT");
-  private static final String MODEL_ID = "TRL2188848820815848149";
+  private static final String MODEL_ID = "TRL3645318651705294848";
   private static final String GLOSSARY_INPUT_URI =
       "gs://cloud-samples-data/translation/glossary_ja.csv";
   private static final String GLOSSARY_ID = "DO_NOT_DELETE_TEST_GLOSSARY";
