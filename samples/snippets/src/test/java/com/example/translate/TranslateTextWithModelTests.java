@@ -72,6 +72,6 @@ public class TranslateTextWithModelTests {
     TranslateTextWithModel.translateTextWithModel(
         PROJECT_ID, "en", "ja", "That' il do it. deception", MODEL_ID);
     String got = bout.toString();
-    assertThat(got).contains("それはそうだ");
+    assertThat(got).contains("やるよ欺瞞");
   }
 }
