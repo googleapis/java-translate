@@ -38,18 +38,22 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
-/** Tests for Batch Translate Text With Glossary sample. */
+/**
+ * Tests for Batch Translate Text With Glossary sample.
+ */
 @RunWith(JUnit4.class)
 @SuppressWarnings("checkstyle:abbreviationaswordinname")
 public class BatchTranslateTextWithGlossaryAndModelTests {
+
   private static final String PROJECT_ID = System.getenv("GOOGLE_CLOUD_PROJECT");
   private static final String INPUT_URI =
       "gs://cloud-samples-data/translation/text_with_custom_model_and_glossary.txt";
   private static final String GLOSSARY_ID = "DO_NOT_DELETE_TEST_GLOSSARY";
   private static final String MODEL_ID = "TRL2188848820815848149";
-  private static final String PREFIX = "BATCH_TRANSLATION_WITH_MODEL_OUTPUT/";
+  private static final String PREFIX = String.format("translation-%s/%s",
+      UUID.randomUUID(), "BATCH_TRANSLATION_WITH_MODEL_OUTPUT/");
   private static final String OUTPUT_URI =
-      String.format("gs://%s/%s%s/", PROJECT_ID, PREFIX, UUID.randomUUID());
+      String.format("gs://%s/%s", PROJECT_ID, PREFIX);
 
   private ByteArrayOutputStream bout;
   private PrintStream out;
@@ -103,6 +107,9 @@ public class BatchTranslateTextWithGlossaryAndModelTests {
     out = new PrintStream(bout);
     originalPrintStream = System.out;
     System.setOut(out);
+
+    // clear up bucket before the use to prevent concurrency issue.
+    cleanUpBucket();
   }
 
   @After
