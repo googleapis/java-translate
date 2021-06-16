@@ -49,7 +49,7 @@ public class BatchTranslateTextWithGlossaryAndModelTests {
   private static final String INPUT_URI =
       "gs://cloud-samples-data/translation/text_with_custom_model_and_glossary.txt";
   private static final String GLOSSARY_ID = "DO_NOT_DELETE_TEST_GLOSSARY";
-  private static final String MODEL_ID = "TRL2188848820815848149";
+  private static final String MODEL_ID = "TRL3645318651705294848";
   private static final String PREFIX = String.format("translation-%s/%s",
       UUID.randomUUID(), "BATCH_TRANSLATION_WITH_MODEL_OUTPUT/");
   private static final String OUTPUT_URI =
