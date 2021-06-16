@@ -52,7 +52,7 @@ public class BatchTranslateTextWithGlossaryTests {
   private static final String PREFIX = String.format("translation-%s/%s",
       UUID.randomUUID(), "BATCH_TRANSLATION_GLOSSARY_OUTPUT/");
   private static final String OUTPUT_URI =
-      String.format("gs://%s/%s", PROJECT_ID, UUID.randomUUID(), PREFIX);
+      String.format("gs://%s/%s", PROJECT_ID, PREFIX);
 
   private ByteArrayOutputStream bout;
   private PrintStream out;
