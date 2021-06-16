@@ -38,19 +38,16 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
-/**
- * Tests for Batch Translate Text sample.
- */
+/** Tests for Batch Translate Text sample. */
 @RunWith(JUnit4.class)
 @SuppressWarnings("checkstyle:abbreviationaswordinname")
 public class BatchTranslateTextTests {
 
   private static final String PROJECT_ID = System.getenv("GOOGLE_CLOUD_PROJECT");
   private static final String INPUT_URI = "gs://cloud-samples-data/translation/text.txt";
-  private static final String PREFIX = String.format("translation-%s/%s",
-      UUID.randomUUID(), "BATCH_TRANSLATION_OUTPUT/");
-  private static final String OUTPUT_URI =
-      String.format("gs://%s/%s", PROJECT_ID, PREFIX);
+  private static final String PREFIX =
+      String.format("translation-%s/%s", UUID.randomUUID(), "BATCH_TRANSLATION_OUTPUT/");
+  private static final String OUTPUT_URI = String.format("gs://%s/%s", PROJECT_ID, PREFIX);
 
   private ByteArrayOutputStream bout;
   private PrintStream out;

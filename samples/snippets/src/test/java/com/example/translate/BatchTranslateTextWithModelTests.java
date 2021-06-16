@@ -38,9 +38,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
-/**
- * Tests for Batch Translate Text With Model sample.
- */
+/** Tests for Batch Translate Text With Model sample. */
 @RunWith(JUnit4.class)
 @SuppressWarnings("checkstyle:abbreviationaswordinname")
 public class BatchTranslateTextWithModelTests {
@@ -49,10 +47,9 @@ public class BatchTranslateTextWithModelTests {
   private static final String INPUT_URI =
       "gs://cloud-samples-data/translation/custom_model_text.txt";
   private static final String MODEL_ID = "TRL3645318651705294848";
-  private static final String PREFIX = String.format("translation-%s/%s",
-      UUID.randomUUID(), "BATCH_TRANSLATION_MODEL_GLOS_OUTPUT/");
-  private static final String OUTPUT_URI =
-      String.format("gs://%s/%s", PROJECT_ID, PREFIX);
+  private static final String PREFIX =
+      String.format("translation-%s/%s", UUID.randomUUID(), "BATCH_TRANSLATION_MODEL_GLOS_OUTPUT/");
+  private static final String OUTPUT_URI = String.format("gs://%s/%s", PROJECT_ID, PREFIX);
 
   private ByteArrayOutputStream bout;
   private PrintStream out;
