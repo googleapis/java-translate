@@ -99,7 +99,7 @@ public class BatchTranslateTextTests {
     originalPrintStream = System.out;
     System.setOut(out);
 
-    // clear up bucket before the use to prevent concurrency issue.
+    // clean up bucket before the use to prevent concurrency issue.
     cleanUpBucket();
   }
 
