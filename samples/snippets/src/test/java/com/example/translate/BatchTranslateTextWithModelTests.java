@@ -27,7 +27,6 @@ import com.google.cloud.testing.junit4.MultipleAttemptsRule;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
-import java.util.UUID;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 import org.junit.After;
@@ -38,9 +37,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
-/**
- * Tests for Batch Translate Text With Model sample.
- */
+/** Tests for Batch Translate Text With Model sample. */
 @RunWith(JUnit4.class)
 @SuppressWarnings("checkstyle:abbreviationaswordinname")
 public class BatchTranslateTextWithModelTests {
@@ -50,8 +47,7 @@ public class BatchTranslateTextWithModelTests {
       "gs://cloud-samples-data/translation/custom_model_text.txt";
   private static final String MODEL_ID = "TRL3645318651705294848";
   private static final String PREFIX = "BATCH_TRANSLATION_WITH_MODEL_OUTPUT/";
-  private static final String OUTPUT_URI =
-      String.format("gs://%s/%s", PROJECT_ID, PREFIX);
+  private static final String OUTPUT_URI = String.format("gs://%s/%s", PROJECT_ID, PREFIX);
 
   private ByteArrayOutputStream bout;
   private PrintStream out;
