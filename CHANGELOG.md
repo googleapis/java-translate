@@ -1,5 +1,46 @@
 # Changelog
 
+### [1.98.4](https://www.github.com/googleapis/java-translate/compare/v1.98.3...v1.98.4) (2021-06-16)
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-storage to v1.116.0 ([#580](https://www.github.com/googleapis/java-translate/issues/580)) ([dbaee0f](https://www.github.com/googleapis/java-translate/commit/dbaee0f1c5e2600fd5d5e888c6dba7d4165fc356))
+
+### [1.98.3](https://www.github.com/googleapis/java-translate/compare/v1.98.2...v1.98.3) (2021-06-15)
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-core to v1.95.2 ([#572](https://www.github.com/googleapis/java-translate/issues/572)) ([331d050](https://www.github.com/googleapis/java-translate/commit/331d050948ed9daaf6fae8398bc1a3815a403d2a))
+
+### [1.98.2](https://www.github.com/googleapis/java-translate/compare/v1.98.1...v1.98.2) (2021-06-09)
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-core to v1.95.1 ([#561](https://www.github.com/googleapis/java-translate/issues/561)) ([599369a](https://www.github.com/googleapis/java-translate/commit/599369a2a75af932e031abe9753ee0bd12ebb88d))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v1.3.0 ([#562](https://www.github.com/googleapis/java-translate/issues/562)) ([b2842d1](https://www.github.com/googleapis/java-translate/commit/b2842d1ea50d485512b991adf4c1f6f20f3bed89))
+
+### [1.98.1](https://www.github.com/googleapis/java-translate/compare/v1.98.0...v1.98.1) (2021-06-02)
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-storage to v1.115.0 ([#552](https://www.github.com/googleapis/java-translate/issues/552)) ([39eab24](https://www.github.com/googleapis/java-translate/commit/39eab24917da64fdb5e2e96c453172acab1fe628))
+
+## [1.98.0](https://www.github.com/googleapis/java-translate/compare/v1.97.3...v1.98.0) (2021-05-31)
+
+
+### Features
+
+* add `gcf-owl-bot[bot]` to `ignoreAuthors` ([#542](https://www.github.com/googleapis/java-translate/issues/542)) ([f7e8d3b](https://www.github.com/googleapis/java-translate/commit/f7e8d3b191e037026c16ab6f1d84e8f47e4ad80e))
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v1.2.0 ([#541](https://www.github.com/googleapis/java-translate/issues/541)) ([7a75c96](https://www.github.com/googleapis/java-translate/commit/7a75c96aa0ac544f4a5ab0f98a9632a86e36ebcf))
+
 ### [1.97.3](https://www.github.com/googleapis/java-translate/compare/v1.97.2...v1.97.3) (2021-05-13)
 
 

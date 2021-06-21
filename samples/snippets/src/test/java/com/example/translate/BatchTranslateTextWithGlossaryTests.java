@@ -49,10 +49,8 @@ public class BatchTranslateTextWithGlossaryTests {
   private static final String INPUT_URI =
       "gs://cloud-samples-data/translation/text_with_glossary.txt";
   private static final String GLOSSARY_ID = "DO_NOT_DELETE_TEST_GLOSSARY";
-  private static final String PREFIX = String.format("translation-%s/%s",
-      UUID.randomUUID(), "BATCH_TRANSLATION_GLOSSARY_OUTPUT/");
-  private static final String OUTPUT_URI =
-      String.format("gs://%s/%s", PROJECT_ID, UUID.randomUUID(), PREFIX);
+  private static final String PREFIX = "BATCH_TRANSLATION_GLOSSARY_OUTPUT/";
+  private static final String OUTPUT_URI = String.format("gs://%s/%s", PROJECT_ID, PREFIX);
 
   private ByteArrayOutputStream bout;
   private PrintStream out;

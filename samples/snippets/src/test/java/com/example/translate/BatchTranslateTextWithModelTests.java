@@ -49,8 +49,7 @@ public class BatchTranslateTextWithModelTests {
   private static final String INPUT_URI =
       "gs://cloud-samples-data/translation/custom_model_text.txt";
   private static final String MODEL_ID = "TRL2188848820815848149";
-  private static final String PREFIX = String.format("translation-%s/%s",
-      UUID.randomUUID(), "BATCH_TRANSLATION_MODEL_GLOS_OUTPUT/");
+  private static final String PREFIX = "BATCH_TRANSLATION_WITH_MODEL_OUTPUT/";
   private static final String OUTPUT_URI =
       String.format("gs://%s/%s", PROJECT_ID, PREFIX);
 
@@ -114,8 +113,7 @@ public class BatchTranslateTextWithModelTests {
     System.setOut(originalPrintStream);
   }
 
-  @Rule
-  public MultipleAttemptsRule multipleAttemptsRule = new MultipleAttemptsRule(3);
+  @Rule public MultipleAttemptsRule multipleAttemptsRule = new MultipleAttemptsRule(3);
 
   @Test
   public void testBatchTranslateTextWithModel()

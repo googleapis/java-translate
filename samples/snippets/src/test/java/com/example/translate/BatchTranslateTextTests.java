@@ -47,10 +47,8 @@ public class BatchTranslateTextTests {
 
   private static final String PROJECT_ID = System.getenv("GOOGLE_CLOUD_PROJECT");
   private static final String INPUT_URI = "gs://cloud-samples-data/translation/text.txt";
-  private static final String PREFIX = String.format("translation-%s/%s",
-      UUID.randomUUID(), "BATCH_TRANSLATION_OUTPUT/");
-  private static final String OUTPUT_URI =
-      String.format("gs://%s/%s", PROJECT_ID, PREFIX);
+  private static final String PREFIX = "BATCH_TRANSLATION_OUTPUT/";
+  private static final String OUTPUT_URI = String.format("gs://%s/%s", PROJECT_ID, PREFIX);
 
   private ByteArrayOutputStream bout;
   private PrintStream out;
@@ -102,7 +100,7 @@ public class BatchTranslateTextTests {
     originalPrintStream = System.out;
     System.setOut(out);
 
-    // clear up bucket before the use to prevent concurrency issue.
+    // clean up bucket before the use to prevent concurrency issue.
     cleanUpBucket();
   }
 
@@ -113,8 +111,7 @@ public class BatchTranslateTextTests {
     System.setOut(originalPrintStream);
   }
 
-  @Rule
-  public MultipleAttemptsRule multipleAttemptsRule = new MultipleAttemptsRule(3);
+  @Rule public MultipleAttemptsRule multipleAttemptsRule = new MultipleAttemptsRule(3);
 
   @Test
   public void testBatchTranslateText()
