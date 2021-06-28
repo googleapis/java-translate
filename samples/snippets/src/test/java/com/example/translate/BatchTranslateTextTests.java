@@ -98,7 +98,7 @@ public class BatchTranslateTextTests {
     out = new PrintStream(bout);
     originalPrintStream = System.out;
     System.setOut(out);
-    
+
     // clean up bucket before the use to prevent concurrency issue.
     cleanUpBucket();
   }
