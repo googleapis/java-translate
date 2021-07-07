@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.translate_v3beta1;
+package com.example.translatev3beta1;
 
 // [START translate_v3beta1_batch_translate_document]
 
@@ -28,7 +28,6 @@ import com.google.cloud.translate.v3beta1.GcsDestination;
 import com.google.cloud.translate.v3beta1.GcsSource;
 import com.google.cloud.translate.v3beta1.LocationName;
 import com.google.cloud.translate.v3beta1.TranslationServiceClient;
-
 import java.io.IOException;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ThreadLocalRandom;

@@ -14,9 +14,14 @@
  * limitations under the License.
  */
 
-package com.example.translate_v3beta1;
+package com.example.translatev3beta1;
 
-import com.example.translate.TranslateText;
+import static com.google.common.truth.Truth.assertThat;
+import static junit.framework.TestCase.assertNotNull;
+
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.PrintStream;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -24,14 +29,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.PrintStream;
-
-import static com.google.common.truth.Truth.assertThat;
-import static junit.framework.TestCase.assertNotNull;
-
-/** Tests for Translate Text sample. */
+/** Tests for Translate Document sample. */
 @RunWith(JUnit4.class)
 @SuppressWarnings("checkstyle:abbreviationaswordinname")
 public class TranslateDocumentTests {
@@ -43,7 +41,7 @@ public class TranslateDocumentTests {
 
   private static void requireEnvVar(String varName) {
     assertNotNull(
-        "Environment variable '%s' is required to perform these tests.".format(varName),
+        String.format(varName),
         System.getenv(varName));
   }
 

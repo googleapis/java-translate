@@ -14,28 +14,27 @@
  * limitations under the License.
  */
 
-package com.example.translate_v3beta1;
+package com.example.translatev3beta1;
+
+import static com.google.common.truth.Truth.assertThat;
+import static junit.framework.TestCase.assertNotNull;
 
 import com.google.api.gax.paging.Page;
 import com.google.cloud.storage.Blob;
 import com.google.cloud.storage.Storage;
 import com.google.cloud.storage.StorageOptions;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.JUnit4;
-
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.util.UUID;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
-
-import static com.google.common.truth.Truth.assertThat;
-import static junit.framework.TestCase.assertNotNull;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
 
 /** Tests for Batch Translate Document sample. */
 @RunWith(JUnit4.class)
@@ -79,9 +78,7 @@ public class BatchTranslateDocumentTests {
   }
 
   private static void requireEnvVar(String varName) {
-    assertNotNull(
-        String.format(varName),
-        System.getenv(varName));
+    assertNotNull(String.format(varName), System.getenv(varName));
   }
 
   @BeforeClass

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.translate_v3beta1;
+package com.example.translatev3beta1;
 
 // [START translate_v3beta1_translate_document]
 
@@ -24,7 +24,6 @@ import com.google.cloud.translate.v3beta1.TranslateDocumentRequest;
 import com.google.cloud.translate.v3beta1.TranslateDocumentResponse;
 import com.google.cloud.translate.v3beta1.TranslationServiceClient;
 import com.google.protobuf.ByteString;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 
@@ -37,13 +36,8 @@ public class TranslateDocument {
     translateDocument(projectId, filePath);
   }
 
-  public static void main(String[] args) throws IOException {
-    translateDocument("java-docs-samples-testing", "resources/fake_invoice.pdf");
-  }
-
-  // Translating Text
+  // Translating Document
   public static void translateDocument(String projectId, String filePath) throws IOException {
-
     // Initialize client that will be used to send requests. This client only needs to be created
     // once, and can be reused for multiple requests. After completing all of your requests, call
     // the "close" method on the client to safely clean up any remaining background resources.
