@@ -24,7 +24,6 @@ import com.google.cloud.translate.v3beta1.TranslateDocumentRequest;
 import com.google.cloud.translate.v3beta1.TranslateDocumentResponse;
 import com.google.cloud.translate.v3beta1.TranslationServiceClient;
 import com.google.protobuf.ByteString;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 

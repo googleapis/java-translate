@@ -28,7 +28,6 @@ import com.google.cloud.translate.v3beta1.GcsDestination;
 import com.google.cloud.translate.v3beta1.GcsSource;
 import com.google.cloud.translate.v3beta1.LocationName;
 import com.google.cloud.translate.v3beta1.TranslationServiceClient;
-
 import java.io.IOException;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ThreadLocalRandom;
