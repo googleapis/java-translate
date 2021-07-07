@@ -40,9 +40,7 @@ public class TranslateDocumentTests {
   private PrintStream originalPrintStream;
 
   private static void requireEnvVar(String varName) {
-    assertNotNull(
-        String.format(varName),
-        System.getenv(varName));
+    assertNotNull(String.format(varName), System.getenv(varName));
   }
 
   @BeforeClass
