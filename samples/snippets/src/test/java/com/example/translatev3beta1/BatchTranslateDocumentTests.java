@@ -42,7 +42,8 @@ import org.junit.runners.JUnit4;
 public class BatchTranslateDocumentTests {
 
   private static final String PROJECT_ID = System.getenv("GOOGLE_CLOUD_PROJECT");
-  private static final String INPUT_URI = "gs://java-docs-samples-testing/translation/invoice2.docx";
+  private static final String INPUT_URI =
+      "gs://java-docs-samples-testing/translation/invoice2.docx";
   private static final String PREFIX = "BATCH_DOC_TRANSLATION_OUTPUT_";
   private static final String OUTPUT_URI =
       String.format("gs://%s/%s%s/", PROJECT_ID, PREFIX, UUID.randomUUID());
