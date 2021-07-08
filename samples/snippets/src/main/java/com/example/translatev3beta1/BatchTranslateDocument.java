@@ -19,6 +19,9 @@ package com.example.translatev3beta1;
 // [START translate_v3beta1_batch_translate_document]
 
 import com.google.api.gax.longrunning.OperationFuture;
+import com.google.api.gax.longrunning.OperationTimedPollAlgorithm;
+import com.google.api.gax.retrying.RetrySettings;
+import com.google.api.gax.retrying.TimedRetryAlgorithm;
 import com.google.cloud.translate.v3beta1.BatchDocumentInputConfig;
 import com.google.cloud.translate.v3beta1.BatchDocumentOutputConfig;
 import com.google.cloud.translate.v3beta1.BatchTranslateDocumentMetadata;
@@ -28,11 +31,13 @@ import com.google.cloud.translate.v3beta1.GcsDestination;
 import com.google.cloud.translate.v3beta1.GcsSource;
 import com.google.cloud.translate.v3beta1.LocationName;
 import com.google.cloud.translate.v3beta1.TranslationServiceClient;
+import com.google.cloud.translate.v3beta1.TranslationServiceSettings;
 import java.io.IOException;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
+import org.threeten.bp.Duration;
 
 public class BatchTranslateDocument {
 
@@ -45,7 +50,8 @@ public class BatchTranslateDocument {
     String targetLanguage = "your-target-language";
     String inputUri = "gs://your-gcs-bucket/path/to/input/file.txt";
     String outputUri = "gs://your-gcs-bucket/path/to/results/";
-    batchTranslateDocument(projectId, sourceLanguage, targetLanguage, inputUri, outputUri, 300);
+    int timeout = 400;
+    batchTranslateDocument(projectId, sourceLanguage, targetLanguage, inputUri, outputUri, timeout);
   }
 
   // Batch translate document
@@ -57,10 +63,23 @@ public class BatchTranslateDocument {
       String outputUri,
       int timeout)
       throws IOException, ExecutionException, InterruptedException, TimeoutException {
+    // refer to https://github.com/googleapis/java-translate/issues/613
+    TranslationServiceSettings.Builder translationServiceSettingsBuilder =
+        TranslationServiceSettings.newBuilder();
+    TimedRetryAlgorithm timedRetryAlgorithm =
+        OperationTimedPollAlgorithm.create(
+            RetrySettings.newBuilder().setTotalTimeout(Duration.ofSeconds(1000)).build());
+    translationServiceSettingsBuilder
+        .batchTranslateDocumentOperationSettings()
+        .setPollingAlgorithm(timedRetryAlgorithm);
+    TranslationServiceSettings translationServiceSettings =
+        translationServiceSettingsBuilder.build();
+
     // Initialize client that will be used to send requests. This client only needs to be created
     // once, and can be reused for multiple requests. After completing all of your requests, call
     // the "close" method on the client to safely clean up any remaining background resources.
-    try (TranslationServiceClient client = TranslationServiceClient.create()) {
+    try (TranslationServiceClient client =
+        TranslationServiceClient.create(translationServiceSettings)) {
       // The ``global`` location is not supported for batch translation
       LocationName parent = LocationName.of(projectId, "us-central1");
 
