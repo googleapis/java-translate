@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Google LLC
+ * Copyright 2021 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -42,7 +42,7 @@ import org.junit.runners.JUnit4;
 public class BatchTranslateDocumentTests {
 
   private static final String PROJECT_ID = System.getenv("GOOGLE_CLOUD_PROJECT");
-  private static final String INPUT_URI = "gs://cloud-samples-data/translation/text.txt";
+  private static final String INPUT_URI = "gs://java-docs-samples-testing/translation/invoice1.pdf";
   private static final String PREFIX = "BATCH_DOC_TRANSLATION_OUTPUT_";
   private static final String OUTPUT_URI =
       String.format("gs://%s/%s%s/", PROJECT_ID, PREFIX, UUID.randomUUID());
