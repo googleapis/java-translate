@@ -50,7 +50,7 @@ public class BatchTranslateDocument {
     String targetLanguage = "your-target-language";
     String inputUri = "gs://your-gcs-bucket/path/to/input/file.txt";
     String outputUri = "gs://your-gcs-bucket/path/to/results/";
-    int timeout = 400;
+    int timeout = 400; // timeout in seconds
     batchTranslateDocument(projectId, sourceLanguage, targetLanguage, inputUri, outputUri, timeout);
   }
 
@@ -75,9 +75,9 @@ public class BatchTranslateDocument {
     TranslationServiceSettings translationServiceSettings =
         translationServiceSettingsBuilder.build();
 
-    // Initialize client that will be used to send requests. This client only needs to be created
-    // once, and can be reused for multiple requests. After completing all of your requests, call
-    // the "close" method on the client to safely clean up any remaining background resources.
+    // Initialize client that sends requests. This client can be reused for multiple requests. After
+    // completing all of your requests, call the "close" method on the client to delete safely clean
+    // up any remaining background resources.
     try (TranslationServiceClient client =
         TranslationServiceClient.create(translationServiceSettings)) {
       // The ``global`` location is not supported for batch translation

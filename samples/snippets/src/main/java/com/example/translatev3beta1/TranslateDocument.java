@@ -38,9 +38,9 @@ public class TranslateDocument {
 
   // Translating Document
   public static void translateDocument(String projectId, String filePath) throws IOException {
-    // Initialize client that will be used to send requests. This client only needs to be created
-    // once, and can be reused for multiple requests. After completing all of your requests, call
-    // the "close" method on the client to safely clean up any remaining background resources.
+    // Initialize client that sends requests. This client can be reused for multiple requests. After
+    // completing all of your requests, call the "close" method on the client to delete safely clean
+    // up any remaining background resources.
     try (TranslationServiceClient client = TranslationServiceClient.create()) {
       // The ``global`` location is not supported for batch translation
       LocationName parent = LocationName.of(projectId, "us-central1");
@@ -67,8 +67,8 @@ public class TranslateDocument {
       // to file. If not provided in the TranslationRequest, the translated file will only be
       // returned through a byte-stream and its output mime type will be the same as the input
       // file's mime type
-      System.out.format(
-          "Response: Detected Language Code - %s",
+      System.out.println(
+          "Response: Detected Language Code - " +
           response.getDocumentTranslation().getDetectedLanguageCode());
     }
   }
