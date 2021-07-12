@@ -68,8 +68,8 @@ public class TranslateDocument {
       // returned through a byte-stream and its output mime type will be the same as the input
       // file's mime type
       System.out.println(
-          "Response: Detected Language Code - " +
-          response.getDocumentTranslation().getDetectedLanguageCode());
+          "Response: Detected Language Code - "
+              + response.getDocumentTranslation().getDetectedLanguageCode());
     }
   }
 }
