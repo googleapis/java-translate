@@ -39,7 +39,7 @@ public class TranslateDocument {
   // Translating Document
   public static void translateDocument(String projectId, String filePath) throws IOException {
     // Initialize client that sends requests. This client can be reused for multiple requests. After
-    // completing all of your requests, call the "close" method on the client to delete safely clean
+    // completing all of your requests, call the "close" method on the client to clean
     // up any remaining background resources.
     try (TranslationServiceClient client = TranslationServiceClient.create()) {
       // The ``global`` location is not supported for batch translation

@@ -76,7 +76,7 @@ public class BatchTranslateDocument {
         translationServiceSettingsBuilder.build();
 
     // Initialize client that sends requests. This client can be reused for multiple requests. After
-    // completing all of your requests, call the "close" method on the client to delete safely clean
+    // completing all of your requests, call the "close" method on the client to clean
     // up any remaining background resources.
     try (TranslationServiceClient client =
         TranslationServiceClient.create(translationServiceSettings)) {
@@ -116,7 +116,7 @@ public class BatchTranslateDocument {
       long randomNumber = ThreadLocalRandom.current().nextInt(timeout, timeout + 100);
       BatchTranslateDocumentResponse response = future.get(randomNumber, TimeUnit.SECONDS);
 
-      System.out.printf("Total Pages: %d\n", response.getTotalPages());
+      System.out.println("Total Pages: " + response.getTotalPages());
     }
   }
 }
