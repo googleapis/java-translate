@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.98.6](https://www.github.com/googleapis/java-translate/compare/v1.98.5...v1.98.6) (2021-07-15)
+
+
+### Bug Fixes
+
+* owlbot post-processor should generate README ([#1154](https://www.github.com/googleapis/java-translate/issues/1154)) ([#621](https://www.github.com/googleapis/java-translate/issues/621)) ([f22e86d](https://www.github.com/googleapis/java-translate/commit/f22e86daf4e306ea72715bf3b0687c88a052de78)), closes [#1146](https://www.github.com/googleapis/java-translate/issues/1146) [#1147](https://www.github.com/googleapis/java-translate/issues/1147)
+
 ### [1.98.5](https://www.github.com/googleapis/java-translate/compare/v1.98.4...v1.98.5) (2021-07-05)
 
 
