@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.99.0](https://www.github.com/googleapis/java-translate/compare/v1.98.5...v1.99.0) (2021-08-04)
+
+
+### Features
+
+* configure initial sp version ([#712](https://www.github.com/googleapis/java-translate/issues/712)) ([e7a7d9a](https://www.github.com/googleapis/java-translate/commit/e7a7d9a5e56b3c6aec4d4522fcc141041b00faf1))
+
 ### [1.98.5](https://www.github.com/googleapis/java-translate/compare/v1.98.4...v1.98.5) (2021-07-05)
 
 
