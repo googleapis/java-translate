@@ -100,7 +100,7 @@ use this Cloud Translation Client Library.
 
 ### Example Application
 
-[`TranslateExample`](https://github.com/googleapis/google-cloud-java/blob/main/google-cloud-examples/src/main/java/com/google/cloud/examples/translate/TranslateExample.java)
+[`TranslateExample`](https://github.com/googleapis/google-cloud-java/blob/master/google-cloud-examples/src/main/java/com/google/cloud/examples/translate/TranslateExample.java)
 is a simple command line interface that provides some of Google Translation's functionality.
 
 #### Creating an authorized service object
@@ -172,7 +172,7 @@ Translation translation = translate.translate(
 #### Complete source code
 
 In
-[DetectLanguageAndTranslate.java](https://github.com/googleapis/google-cloud-java/tree/main/google-cloud-examples/src/main/java/com/google/cloud/examples/translate/snippets/DetectLanguageAndTranslate.java)
+[DetectLanguageAndTranslate.java](https://github.com/googleapis/google-cloud-java/tree/master/google-cloud-examples/src/main/java/com/google/cloud/examples/translate/snippets/DetectLanguageAndTranslate.java)
 we put together all the code shown above into one program. The program assumes that either Application
 Default Credentials or a valid API key are available.
 
