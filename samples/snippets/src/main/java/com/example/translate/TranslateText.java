@@ -25,6 +25,7 @@ import com.google.cloud.translate.v3.TranslateTextResponse;
 import com.google.cloud.translate.v3.Translation;
 import com.google.cloud.translate.v3.TranslationServiceClient;
 import java.io.IOException;
+
 // [END translate_v3_translate_text_0]
 
 public class TranslateText {
