@@ -229,8 +229,8 @@ public final class TranslationServiceProto {
   static {
     java.lang.String[] descriptorData = {
       "\n"
-          + "8google/cloud/translate/v3beta1/translation_service.proto\022 google.cloud.transla"
-          + "tion.v3beta1\032\034google/api/annotations.proto\032\027google/api/client.proto\032\037google/api/field_behavior.proto\032\031google/api/resource.proto\032#google/longrunning/operations.proto\032\037google/protobuf/timestamp.proto\032\027google/rpc/status.proto\"N\n"
+          + "8google/cloud/translate/v3beta1/translation_service.proto\022"
+          + " google.cloud.translation.v3beta1\032\034google/api/annotations.proto\032\027google/api/client.proto\032\037google/api/field_behavior.proto\032\031google/api/resource.proto\032#google/longrunning/operations.proto\032\037google/protobuf/timestamp.proto\032\027google/rpc/status.proto\"N\n"
           + "\033TranslateTextGlossaryConfig\022\025\n"
           + "\010glossary\030\001 \001(\tB\003\340A\002\022\030\n"
           + "\013ignore_case\030\002 \001(\010B\003\340A\001\"\277\003\n"
@@ -528,8 +528,7 @@ public final class TranslationServiceProto {
           + "\021TranslateDocument\022:.google.cloud.translation.v3beta1.TranslateDocumentRequest\032;.google.cloud.translation.v3beta1.TranslateDocumentResponse\"E\202\323\344\223\002?\":/v3beta1/{parent=projects/*/locations/*}:translateDocument:\001*\022\353\001\n"
           + "\022BatchTranslateText\022;.google.cloud.translation.v3beta1.BatchTranslateTextRequest\032\035.google.longrunning.Operation\"y\202\323\344\223\002@\";/v3beta1/{parent=projects/*/locations/*}:batchTranslateText:\001*\312A0\n"
           + "\026BatchTranslateResponse\022\026BatchTranslateMetadata\022\330\002\n"
-          + "\026BatchTranslateDocument\022?.google.cloud.transla"
-          + "tion.v3beta1.BatchTranslateDocumentRequest\032\035.google.longrunning.Operation\"\335\001\202\323\344\223\002D\"?/v3beta1/{parent=projects/*/locations/*}:batchTranslateDocument:\001*\332AMparent,source_language_code,target_language_codes,input_configs,output_config\312A@\n"
+          + "\026BatchTranslateDocument\022?.google.cloud.translation.v3beta1.BatchTranslateDocumentRequest\032\035.google.longrunning.Operation\"\335\001\202\323\344\223\002D\"?/v3beta1/{parent=projects/*/locations/*}:batchTranslateDocument:\001*\332AMparent,source_language_code,target_language_codes,input_configs,output_config\312A@\n"
           + "\036BatchTranslateDocumentResponse\022\036BatchTranslateDocumentMetadata\022\346\001\n"
           + "\016CreateGlossary\0227.google.cloud.translation.v3beta1.CreateGlossaryRequest\032\035.google.longrunning.Operation\"|\202\323\344\223\002?\"3/v3beta1/{parent=projects/*/locations/*}/glossaries:\010glossary\332A\017parent,glossary\312A\"\n"
           + "\010Glossary\022\026CreateGlossaryMetadata\022\320\001\n"
