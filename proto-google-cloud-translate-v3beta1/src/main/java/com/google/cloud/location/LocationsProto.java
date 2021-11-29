@@ -79,8 +79,7 @@ public final class LocationsProto {
           + "\005value\030\002 \001(\t:\0028\0012\244\003\n"
           + "\tLocations\022\253\001\n\r"
           + "ListLocations\022+.google.cloud.location.ListLocationsRequest\032,.google.cloud.location.ListLocationsResponse\"?\202\323\344\223\0029\022\024/v1/{name=locations}Z!\022\037/v1/{name=projects/*}/locations\022\236\001\n"
-          + "\013GetLocation\022).google.cloud.location.GetLocationRequest"
-          + "\032\037.google.cloud.location.Location\"C\202\323\344\223\002=\022\026/v1/{name=locations/*}Z#\022!/v1/{name=projects/*/locations/*}\032H\312A\024cloud.googleapis.com\322A.https://www.googleapis.com/auth/cloud-platformBo\n"
+          + "\013GetLocation\022).google.cloud.location.GetLocationRequest\032\037.google.cloud.location.Location\"C\202\323\344\223\002=\022\026/v1/{name=locations/*}Z#\022!/v1/{name=projects/*/locations/*}\032H\312A\024cloud.googleapis.com\322A.https://www.googleapis.com/auth/cloud-platformBo\n"
           + "\031com.google.cloud.locationB\016LocationsProtoP\001Z=google.golang.o"
           + "rg/genproto/googleapis/cloud/location;location\370\001\001b\006proto3"
     };
