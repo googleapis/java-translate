@@ -90,6 +90,15 @@
         <version>2.5.1</version>
         <type>pom</type>
         <scope>import</scope>
+        <exclusions>
+          <!-- excluding prot-google-common-protos until location protos can be
+          removed safely from this library. Location from common-protos conflicts
+          with the Location files in this repo -->
+          <exclusion>
+            <groupId>com.google.api.grpc</groupId>
+            <artifactId>proto-google-common-protos</artifactId>
+          </exclusion>
+        </exclusions>
       </dependency>
       <dependency>
         <groupId>com.google.apis</groupId>
