@@ -4,7 +4,7 @@
   <groupId>com.google.cloud</groupId>
   <artifactId>google-cloud-translate-parent</artifactId>
   <packaging>pom</packaging>
-  <version>2.3.3-SNAPSHOT</version><!-- {x-version-update:google-cloud-translate:current} -->
+  <version>2.3.4-SNAPSHOT</version><!-- {x-version-update:google-cloud-translate:current} -->
   <name>Google Cloud Translate Parent</name>
   <url>https://github.com/googleapis/java-translate</url>
   <description>
@@ -14,7 +14,7 @@
   <parent>
     <groupId>com.google.cloud</groupId>
     <artifactId>google-cloud-shared-config</artifactId>
-    <version>1.5.1</version>
+    <version>1.5.3</version>
   </parent>
 
   <developers>
@@ -61,33 +61,33 @@
       <dependency>
         <groupId>com.google.api.grpc</groupId>
         <artifactId>proto-google-cloud-translate-v3beta1</artifactId>
-        <version>0.85.3-SNAPSHOT</version><!-- {x-version-update:proto-google-cloud-translate-v3beta1:current} -->
+        <version>0.85.4-SNAPSHOT</version><!-- {x-version-update:proto-google-cloud-translate-v3beta1:current} -->
       </dependency>
       <dependency>
         <groupId>com.google.api.grpc</groupId>
         <artifactId>proto-google-cloud-translate-v3</artifactId>
-        <version>2.3.3-SNAPSHOT</version><!-- {x-version-update:proto-google-cloud-translate-v3:current} -->
+        <version>2.3.4-SNAPSHOT</version><!-- {x-version-update:proto-google-cloud-translate-v3:current} -->
       </dependency>
       <dependency>
         <groupId>com.google.api.grpc</groupId>
         <artifactId>grpc-google-cloud-translate-v3beta1</artifactId>
-        <version>0.85.3-SNAPSHOT</version><!-- {x-version-update:grpc-google-cloud-translate-v3beta1:current} -->
+        <version>0.85.4-SNAPSHOT</version><!-- {x-version-update:grpc-google-cloud-translate-v3beta1:current} -->
       </dependency>
       <dependency>
         <groupId>com.google.api.grpc</groupId>
         <artifactId>grpc-google-cloud-translate-v3</artifactId>
-        <version>2.3.3-SNAPSHOT</version><!-- {x-version-update:grpc-google-cloud-translate-v3:current} -->
+        <version>2.3.4-SNAPSHOT</version><!-- {x-version-update:grpc-google-cloud-translate-v3:current} -->
       </dependency>
       <dependency>
         <groupId>com.google.cloud</groupId>
         <artifactId>google-cloud-translate</artifactId>
-        <version>2.3.3-SNAPSHOT</version><!-- {x-version-update:google-cloud-translate:current} -->
+        <version>2.3.4-SNAPSHOT</version><!-- {x-version-update:google-cloud-translate:current} -->
       </dependency>
 
       <dependency>
         <groupId>com.google.cloud</groupId>
         <artifactId>google-cloud-shared-dependencies</artifactId>
-        <version>2.13.0</version>
+        <version>3.0.1</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -143,7 +143,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-project-info-reports-plugin</artifactId>
-        <version>3.3.0</version>
+        <version>3.4.1</version>
         <reportSets>
           <reportSet>
             <reports>
@@ -170,7 +170,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
-        <version>3.4.0</version>
+        <version>3.4.1</version>
         <reportSets>
           <reportSet>
             <id>html</id>
