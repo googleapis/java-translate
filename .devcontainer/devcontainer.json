@@ -1,0 +1,5 @@
+"features": {
+    "ghcr.io/dhoeric/features/google-cloud-cli:1": {
+        "version": "latest"
+    }
+}
